@@ -14,6 +14,7 @@ Página web e Instagram para **GAL Publicidad** (México): ponen la publicidad d
 ## Documentos del proyecto (leer solo el que haga falta)
 
 - `ESTRATEGIA.md` — plan maestro: público, estructura de la página, Instagram, fases y checklist de contenido
+- `TEXTOS.md` — textos de cada sección de la página (Fase 1), con lo que falta pedir a GAL
 - `RECURSOS.md` — colores de marca, skills instaladas, sitios de inspiración
 - `marca/` — logo, camioneta rotulada, video del logo
 

@@ -214,13 +214,13 @@ Archivos de marca en `marca/`. Colores y recursos en `RECURSOS.md`.
 
 Sin esto la página se queda con textos inventados. **Es lo más importante.**
 
-- [x] **Modelo de negocio:** rotulan vehículos de los clientes; no tienen camionetas propias
+- [x] **Modelo de negocio:** no tienen vehículos propios; negocian con dueños de rutas y unidades
 - [x] Tiempos de entrega: 3 días (lonas, textil, vinil) / 1 semana (campañas)
 - [x] 200–300 vehículos rotulados **al año**
 - [x] Campañas incluyen monitoreo y reemplazo del vinil
 - [x] Rutas: la marca elige la ruta; GAL negocia con dueños de rutas y unidades
 - [x] Permiso para usar los logos de los clientes
-- [ ] ¿Se pueden mostrar las **fotos** de las campañas (no solo los logos)?
+- [x] Fotos de campañas de Price Shoes y Kolors (en `marca/fotos/`, tapar placas)
 - [ ] ¿Entregan algún reporte o fotos al cliente durante la campaña?
 - [ ] Ciudades o estados donde trabajan
 - [ ] Precios o rangos (aunque no se publiquen)
@@ -238,7 +238,7 @@ Sin esto la página se queda con textos inventados. **Es lo más importante.**
 | Fase | Qué se hace | Resultado |
 |---|---|---|
 | **0. Contenido** | GAL entrega la checklist del punto 12 | Material real |
-| **1. Textos y estructura** | Escribir cada sección con los datos reales | Textos aprobados |
+| **1. Textos y estructura** | Escribir cada sección con los datos reales (`TEXTOS.md`) | Textos aprobados |
 | **2. Diseño** | Propuesta visual del inicio + 1 sección | Dirección aprobada |
 | **3. Construcción** | Página completa con animaciones | Página en borrador |
 | **4. Revisión** | Celular, velocidad, accesibilidad, textos | Página lista |
