@@ -7,7 +7,7 @@
 
 ## 1. Resumen en 5 líneas
 
-1. GAL vende **publicidad que se mueve**: anuncios en vinil sobre camionetas que recorren la ciudad.
+1. GAL convierte las **flotas de las empresas en publicidad que se mueve**: rotula sus camionetas con vinil. También hace lonas e impresión textil y de vinil.
 2. Tiene **9 años** y ha trabajado con **Kolors, Price Shoes, Botanas El Sol y Universidad Humanitas**. Esa es su mejor carta de venta.
 3. La página no es un folleto. Su trabajo es **convertir visitas en solicitudes de cotización**.
 4. Instagram atrae y demuestra (camionetas en la calle). La página convence y captura el contacto.
@@ -15,7 +15,30 @@
 
 ---
 
-## 2. Qué vende GAL en realidad
+## 2. Cómo funciona GAL (confirmado por GAL, octubre 2026)
+
+**GAL no tiene camionetas propias.** Rotula los vehículos de sus clientes, según las rutas que el cliente pide.
+
+| Dato | Detalle |
+|---|---|
+| Servicio principal | Rotulación de camionetas y flotas de empresas |
+| Otros productos | Lonas, impresión textil, impresión de vinil |
+| Tamaño de proyectos | Flotas de hasta ~100 camionetas por cliente |
+| Experiencia | Entre 200 y 300 vehículos rotulados (por confirmar si es el total o de este año) |
+| Campañas en camionetas | Recomiendan **más de 3 meses**: más volumen y menor costo |
+| Tiempo de anticipación | **3 días** para lonas, textil y vinil · **1 semana** para campañas (incluye diseño) |
+
+**Cómo consiguen clientes hoy:**
+1. **Salen a buscarlos** (prospección) → les mandan el **Media Kit** → cotización.
+2. **Los clientes los buscan** → cotización según el producto.
+
+**Qué incluye una cotización:** medidas, diseño, costo del diseño y precio final del producto.
+
+> Esto confirma que el **Media Kit** y el **formulario de cotización** son las piezas centrales. La página debe pedir los datos que GAL necesita para cotizar: producto, medidas o número de vehículos, si necesita diseño y fecha.
+
+---
+
+## 2b. Qué vende GAL en realidad
 
 Un gerente de marketing no compra "vinil en una camioneta". Compra:
 
@@ -38,13 +61,14 @@ Circulan cifras como "30,000 a 70,000 impresiones diarias por vehículo" y "97% 
 
 | Público | Qué le importa | Ejemplo |
 |---|---|---|
-| **Gerentes de marketing de marcas medianas y grandes** | Alcance, pruebas, factura, profesionalismo | Price Shoes, Kolors |
+| **Empresas con flotas de reparto o ventas** | Que sus camionetas vendan mientras circulan; acabado que dure; rotular muchas unidades a tiempo | Botanas El Sol, Price Shoes, Kolors |
+| **Gerentes de marketing de marcas medianas y grandes** | Imagen de marca consistente, factura, profesionalismo | Price Shoes, Kolors |
 | **Agencias de medios y de publicidad** | Un proveedor confiable para revender a sus clientes | Agencias que planean campañas |
 | **Universidades y escuelas** | Temporadas de inscripción, presencia en zonas específicas | Universidad Humanitas |
 | **Consumo masivo y alimentos** | Lanzamientos, promociones, puntos de venta | Botanas El Sol |
 | **Negocios regionales** (plazas, inmobiliarias, eventos) | Precio accesible, resultados rápidos | Aperturas, preventas |
 
-**Cliente ideal (principal):** el responsable de marketing de una marca con tiendas o puntos de venta, que ya invierte en publicidad exterior y busca algo más llamativo o más barato.
+**Cliente ideal (principal):** una empresa con **flota de camionetas** (reparto, ventas, servicio) que todavía no las aprovecha como publicidad, o que necesita rotular muchas unidades con calidad y a tiempo.
 
 ---
 
@@ -53,9 +77,9 @@ Circulan cifras como "30,000 a 70,000 impresiones diarias por vehículo" y "97% 
 | Duda del visitante | Respuesta en la página |
 |---|---|
 | "¿Esto de verdad funciona?" | Casos reales con fotos de las 4 marcas |
-| "¿Cuánta gente lo ve?" | Rutas, zonas y horas de recorrido (datos propios) |
+| "¿Pueden con toda mi flota?" | Flotas de hasta ~100 camionetas y 200+ vehículos rotulados |
 | "¿Cuánto cuesta?" | "Desde $X" o paquetes. Si no se publica precio: "Cotización en 24 horas" |
-| "¿Cómo sé que sí circuló?" | Reporte de campaña: fotos, video y recorrido GPS (si GAL lo tiene) |
+| "¿Cuánto tardan?" | 3 días en lonas y vinil · 1 semana en campañas con diseño |
 | "¿Son serios?" | 9 años, logos de clientes, correo y teléfono visibles, factura |
 | "¿Es complicado?" | Proceso en 4 pasos, ellos se encargan de todo |
 
@@ -83,9 +107,9 @@ Cada sección tiene **un solo trabajo**. Si no lo cumple, se quita.
 | 2 | **Marcas que confían** | Confianza inmediata | Logos de Kolors, Price Shoes, Botanas El Sol, Humanitas (con permiso) |
 | 3 | **Por qué publicidad móvil** | Explicar la ventaja contra otros medios | Comparativa simple: espectacular fijo vs camioneta que se mueve |
 | 4 | **Casos de éxito** | Probar que funciona | Fotos reales de cada campaña: marca, ciudad, duración, resultado |
-| 5 | **Cobertura y rutas** | "¿Llegan a donde está mi cliente?" | Mapa con rutas que se trazan al hacer scroll (**momento estrella**) |
-| 6 | **Cómo funciona** | Quitar el miedo a lo complicado | 4 pasos: brief → diseño → instalación del vinil → recorrido y reporte |
-| 7 | **Formatos y paquetes** | Ayudar a decidir | Tipos de rotulado y duración de campaña |
+| 5 | **Flotas rotuladas** | Mostrar escala y experiencia | Galería de camionetas rotuladas; contador "200+ vehículos" (dato real de GAL). La estela CMYK del logo "envuelve" una camioneta al hacer scroll (**momento estrella**) |
+| 6 | **Cómo funciona** | Quitar el miedo a lo complicado | 4 pasos: cotización → diseño → impresión → instalación del vinil. Con tiempos reales: 3 días / 1 semana |
+| 7 | **Productos** | Ayudar a decidir | Rotulación vehicular (principal), lonas, impresión textil, vinil |
 | 8 | **Preguntas frecuentes** | Resolver objeciones sin llamada | Acordeón: permisos, tiempos, facturación, diseño incluido |
 | 9 | **Cotiza tu campaña** | Capturar el contacto | Formulario + WhatsApp + correo |
 
@@ -184,9 +208,12 @@ Archivos de marca en `marca/`. Colores y recursos en `RECURSOS.md`.
 
 Sin esto la página se queda con textos inventados. **Es lo más importante.**
 
-- [ ] **Modelo de negocio:** ¿GAL tiene camionetas propias y renta el espacio (publicidad móvil), rotula los vehículos del cliente, o ambas?
-- [ ] Número de camionetas y ciudades/zonas donde circulan
-- [ ] Rutas típicas y horarios
+- [x] **Modelo de negocio:** rotulan vehículos de los clientes; no tienen camionetas propias
+- [x] Tiempos de entrega: 3 días (lonas, textil, vinil) / 1 semana (campañas)
+- [ ] ¿Los 200–300 vehículos rotulados son el total en 9 años o solo de este año?
+- [ ] "Campañas de más de 3 meses": ¿qué incluye una campaña además del rotulado? (¿mantenimiento, reporte, cambio de diseño?)
+- [ ] "Según las rutas que pide el cliente": ¿qué papel juegan las rutas en su servicio?
+- [ ] Ciudades o estados donde trabajan
 - [ ] Precios o rangos (aunque no se publiquen)
 - [ ] **Fotos y videos reales** de camionetas rotuladas (de cada cliente si es posible)
 - [ ] **Permiso** para mostrar los logos de Kolors, Price Shoes, Botanas El Sol y Universidad Humanitas

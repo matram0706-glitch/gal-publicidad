@@ -1,10 +1,11 @@
 # GAL Publicidad
 
-Página web e Instagram para **GAL Publicidad**: publicidad móvil en camionetas con vinil (México).
+Página web e Instagram para **GAL Publicidad** (México): rotulan con vinil las camionetas y flotas de sus clientes (no tienen camionetas propias). También hacen lonas e impresión textil y de vinil.
 
 ## Datos de la empresa
 
-- 9 años de experiencia
+- 9 años de experiencia · 200–300 vehículos rotulados · flotas de hasta ~100 camionetas
+- Tiempos: 3 días (lonas, textil, vinil) · 1 semana (campañas con diseño)
 - Correo: galpublicidad@gmail.com
 - Clientes: Kolors, Price Shoes, Botanas El Sol, Universidad Humanitas
 - Frases: "Publicidad urbana" · "Al alcance de ti"
