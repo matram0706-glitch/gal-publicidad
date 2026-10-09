@@ -111,6 +111,7 @@ Cada sección tiene **un solo trabajo**. Si no lo cumple, se quita.
 |---|---|---|---|
 | 1 | **Inicio (hero)** | Decir qué es GAL en 3 segundos y mostrar la camioneta | Video corto de camioneta en movimiento, o la estela de 4 colores del logo dibujándose al cargar |
 | 2 | **Marcas que confían** | Confianza inmediata | Logos de Kolors, Price Shoes, Botanas El Sol, Humanitas (con permiso) |
+| 2b | **Nosotros** | Mostrar que GAL es una empresa formal | Quiénes somos, misión, visión, valores y compromisos con el cliente |
 | 3 | **Por qué publicidad móvil** | Explicar la ventaja contra otros medios | Comparativa simple: espectacular fijo vs camioneta que se mueve |
 | 4 | **Casos de éxito** | Probar que funciona | Fotos reales de cada campaña: marca, ciudad, duración, resultado |
 | 5 | **Tú eliges la ruta** | Explicar el diferenciador | Mapa donde la estela CMYK del logo se convierte en rutas que se trazan al hacer scroll, y aparecen camionetas rotuladas (**momento estrella**). Dato real: 200–300 vehículos al año |
