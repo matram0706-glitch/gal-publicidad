@@ -7,7 +7,7 @@
 
 ## 1. Resumen en 5 líneas
 
-1. GAL pone la **publicidad de las marcas en combis, camionetas y taxis** que recorren las rutas que la marca elige. Se encarga de todo: rutas, diseño, instalación y mantenimiento. También hace lonas e impresión.
+1. GAL **rotula vehículos de transporte con la publicidad de las marcas**. Se encarga del diseño, la impresión, la instalación y el mantenimiento. **Las rutas las proporciona el cliente.** También hace impresión digital, recorte de vinil y lonas.
 2. Tiene **9 años** y ha trabajado con **Kolors, Price Shoes, Botanas El Sol y Universidad Humanitas**. Esa es su mejor carta de venta.
 3. La página no es un folleto. Su trabajo es **convertir visitas en solicitudes de cotización**.
 4. Instagram atrae y demuestra (camionetas en la calle). La página convence y captura el contacto.
@@ -17,18 +17,18 @@
 
 ## 2. Cómo funciona GAL (confirmado por GAL, octubre 2026)
 
-**GAL pone la publicidad de las marcas en vehículos de transporte** (combis, camionetas, taxis) que recorren las rutas que la marca elige. No tiene vehículos propios: negocia con los dueños de las rutas y de las unidades.
+**GAL rotula vehículos de transporte con la publicidad de las marcas.** **Actualización (oct. 2026): las rutas las proporciona el cliente; GAL no ofrece ni negocia rutas.**
 
-**Ejemplo real:** Price Shoes dice "quiero que mi anuncio pase por esta ruta" → GAL negocia con el dueño de la ruta y de las camionetas → diseña, imprime e instala el vinil → **monitorea constantemente** que el anuncio siga en buen estado y, si se daña, lo cambia.
+**Ejemplo real:** Price Shoes pide rotular sus unidades → GAL diseña, imprime e instala el vinil → **monitorea constantemente** que el anuncio siga en buen estado y, si se daña, lo cambia.
 
 | Dato | Detalle |
 |---|---|
-| Servicio principal | Campañas de publicidad en vehículos de transporte, por rutas |
-| Otros productos | Lonas, impresión textil, impresión de vinil |
-| Volumen | **200 a 300 vehículos rotulados al año** · campañas de hasta ~100 unidades por cliente |
+| Servicio principal | Campañas de publicidad en vehículos de transporte (rutas del cliente) |
+| Otros servicios | Impresión digital, recorte de vinil, lonas |
+| Volumen | **300 a 500 vehículos rotulados al año** · campañas de hasta ~100 unidades por cliente |
 | Duración recomendada | **Más de 3 meses**: más volumen y menor costo |
 | Seguimiento | Monitoreo constante; se reemplaza el vinil si se daña |
-| Tiempo de anticipación | **3 días** para lonas, textil y vinil · **1 semana** para campañas (incluye diseño) |
+| Tiempo de anticipación | **3 días** para impresión, recorte de vinil y lonas · **1 semana** para campañas (incluye diseño) |
 | Logos de clientes | GAL autoriza usar los logos de las empresas |
 
 **Cómo consiguen clientes hoy:**
@@ -37,9 +37,9 @@
 
 **Qué incluye una cotización:** medidas, diseño, costo del diseño y precio final del producto.
 
-> El **Media Kit** y el **formulario de cotización** son las piezas centrales. El formulario debe pedir: producto, zona o rutas de interés, número de unidades, si necesita diseño y fecha de inicio.
+> El **Media Kit** y el **formulario de cotización** son las piezas centrales. El formulario debe pedir: servicio, número de unidades, rutas de sus unidades, si necesita diseño y fecha de inicio.
 
-**Lo que hace único a GAL:** la marca no tiene que conseguir vehículos ni negociar con transportistas. GAL se encarga de todo: rutas, permisos con los dueños, diseño, impresión, instalación y mantenimiento.
+**Lo que hace único a GAL:** un solo proveedor para todo: diseño, impresión, instalación y mantenimiento durante la campaña.
 
 ---
 
@@ -51,7 +51,7 @@ Un gerente de marketing no compra "vinil en una camioneta". Compra:
 |---|---|
 | Que **lo vean** donde está su cliente | "Tu marca recorre las calles donde está tu cliente" |
 | **Un costo bajo** por persona que ve el anuncio | Comparativa contra espectaculares, radio y redes |
-| **Pruebas** de que la campaña ocurrió | Fotos, video y reporte de rutas de cada campaña |
+| **Pruebas** de que la campaña ocurrió | Fotos y video de cada campaña |
 | **Confianza**: que no le van a fallar | 9 años y marcas nacionales que ya confiaron |
 | **Facilidad**: que GAL se encargue de todo | Diseño, impresión, instalación y recorrido |
 
@@ -81,9 +81,8 @@ Circulan cifras como "30,000 a 70,000 impresiones diarias por vehículo" y "97% 
 | Duda del visitante | Respuesta en la página |
 |---|---|
 | "¿Esto de verdad funciona?" | Casos reales con fotos de las 4 marcas |
-| "¿Pasan por donde está mi cliente?" | Tú eliges las rutas; GAL negocia con los transportistas |
 | "¿Y si el anuncio se daña?" | Monitoreo constante y reemplazo del vinil |
-| "¿Pueden hacer una campaña grande?" | 200–300 vehículos al año; campañas de hasta ~100 unidades |
+| "¿Pueden hacer una campaña grande?" | 300–500 vehículos al año; campañas de hasta ~100 unidades |
 | "¿Cuánto cuesta?" | "Desde $X" o paquetes. Si no se publica precio: "Cotización en 24 horas" |
 | "¿Cuánto tardan?" | 3 días en lonas y vinil · 1 semana en campañas con diseño |
 | "¿Son serios?" | 9 años, logos de clientes, correo y teléfono visibles, factura |
@@ -97,7 +96,7 @@ Circulan cifras como "30,000 a 70,000 impresiones diarias por vehículo" y "97% 
 - Botón de **WhatsApp** (lo más rápido en México).
 - **Formulario corto**: nombre, empresa, correo/teléfono, ciudad, fecha aproximada de campaña.
 
-**Acción secundaria:** descargar el **Media Kit en PDF** (presentación con formatos, rutas, casos y precios). Pide correo a cambio, así GAL obtiene contactos de empresas interesadas.
+**Acción secundaria:** descargar el **Media Kit en PDF** (presentación con formatos, casos y precios). Pide correo a cambio, así GAL obtiene contactos de empresas interesadas.
 
 **Cómo se mide el éxito:** número de cotizaciones por mes, no visitas.
 
@@ -114,16 +113,15 @@ Cada sección tiene **un solo trabajo**. Si no lo cumple, se quita.
 | 2b | **Nosotros** | Mostrar que GAL es una empresa formal | Quiénes somos, misión, visión, valores y compromisos con el cliente |
 | 3 | **Por qué publicidad móvil** | Explicar la ventaja contra otros medios | Comparativa simple: espectacular fijo vs camioneta que se mueve |
 | 4 | **Casos de éxito** | Probar que funciona | Fotos reales de cada campaña: marca, ciudad, duración, resultado |
-| 5 | **Tú eliges la ruta** | Explicar el diferenciador | Mapa donde la estela CMYK del logo se convierte en rutas que se trazan al hacer scroll, y aparecen camionetas rotuladas (**momento estrella**). Dato real: 200–300 vehículos al año |
-| 6 | **Cómo funciona** | Quitar el miedo a lo complicado | 5 pasos: eliges ruta → GAL negocia con transportistas → diseño e impresión → instalación → monitoreo y mantenimiento |
-| 7 | **Productos** | Ayudar a decidir | Campañas en transporte (principal), lonas, impresión textil, vinil |
+| 6 | **Cómo funciona** | Quitar el miedo a lo complicado | 5 pasos: solicitud → diseño → impresión → instalación → supervisión y mantenimiento |
+| 7 | **Productos** | Ayudar a decidir | Campañas en transporte (principal), impresión digital, recorte de vinil, lonas |
 | 8 | **Preguntas frecuentes** | Resolver objeciones sin llamada | Acordeón: permisos, tiempos, facturación, diseño incluido |
 | 9 | **Cotiza tu campaña** | Capturar el contacto | Formulario + WhatsApp + correo |
 
 **Botón fijo** de WhatsApp visible en toda la página (sobre todo en celular).
 
 ### Principios de animación (para retener sin cansar)
-- **Un momento estrella**, no animaciones en todo. Propuesta: la **estela CMYK del logo** se convierte en las **rutas del mapa**. Une la marca con el servicio.
+- **Un momento estrella**, no animaciones en todo. Ya no hay mapa de rutas (las rutas las da el cliente). Nueva propuesta a definir en la Fase 2: la **estela CMYK del logo** se convierte en el vinil que "envuelve" una camioneta, o los casos reales con fotos.
 - El movimiento **cuenta algo**: la camioneta "avanza" conforme bajas.
 - Debe cargar rápido en **celular con datos**: la mayoría de visitas llegarán desde Instagram.
 - Respetar a quien desactiva animaciones en su teléfono.
@@ -169,7 +167,7 @@ Archivos de marca en `marca/`. Colores y recursos en `RECURSOS.md`.
 - **Nombre:** GAL Publicidad | Publicidad móvil
 - **Bio:** qué hacen + ciudad + prueba ("9 años · Kolors, Price Shoes…") + llamada a la acción
 - **Enlace:** a la página (sección de cotización)
-- **Historias destacadas:** Clientes · Rutas · Proceso · Cotiza
+- **Historias destacadas:** Clientes · Servicios · Proceso · Cotiza
 
 ### Pilares de contenido
 | Pilar | Formato | Ejemplo |
@@ -191,7 +189,7 @@ Archivos de marca en `marca/`. Colores y recursos en `RECURSOS.md`.
 
 ## 10. Conectar con más empresas (prospección)
 
-1. **Media Kit en PDF:** formatos, rutas, casos, precios. Es la herramienta de venta principal.
+1. **Media Kit en PDF:** formatos, casos, precios. Es la herramienta de venta principal.
 2. **Lista de prospectos:** marcas similares a los clientes actuales (zapaterías, pinturas, botanas, escuelas, plazas comerciales).
 3. **Mensaje de primer contacto** (correo / LinkedIn): corto, con un caso real y una propuesta concreta.
 4. **Seguimiento** a los 3 y 7 días.
@@ -215,11 +213,11 @@ Archivos de marca en `marca/`. Colores y recursos en `RECURSOS.md`.
 
 Sin esto la página se queda con textos inventados. **Es lo más importante.**
 
-- [x] **Modelo de negocio:** no tienen vehículos propios; negocian con dueños de rutas y unidades
-- [x] Tiempos de entrega: 3 días (lonas, textil, vinil) / 1 semana (campañas)
-- [x] 200–300 vehículos rotulados **al año**
+- [x] **Modelo de negocio:** rotulan vehículos; las rutas las proporciona el cliente
+- [x] Tiempos de entrega: 3 días (impresión, recorte de vinil, lonas) / 1 semana (campañas)
+- [x] 300–500 vehículos rotulados **al año**
 - [x] Campañas incluyen monitoreo y reemplazo del vinil
-- [x] Rutas: la marca elige la ruta; GAL negocia con dueños de rutas y unidades
+- [x] Rutas: las proporciona el cliente
 - [x] Permiso para usar los logos de los clientes
 - [x] Fotos de campañas de Price Shoes y Kolors (en `marca/fotos/`, tapar placas)
 - [ ] ¿Entregan algún reporte o fotos al cliente durante la campaña?
