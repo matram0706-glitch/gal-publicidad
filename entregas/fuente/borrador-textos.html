@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>GAL Publicidad · Borrador de textos para la página web</title>
+<style>
+  @page { size: A4; margin: 18mm 18mm 20mm; }
+  @page :first { margin: 0; }
+  :root {
+    --azul: #00339B; --azul-osc: #001E5C; --amarillo: #FFF301; --magenta: #FF01FF;
+    --cian: #01FFFF; --negro: #333333; --gris: #666666; --linea: #DCE1EA; --fondo: #F4F6FA;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Inter", sans-serif; font-size: 10.5pt; line-height: 1.55; color: #1E2430; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  h1, h2, h3 { font-family: "Inter", sans-serif; color: var(--azul); line-height: 1.15; }
+  h2 { font-size: 17pt; font-weight: 900; font-style: italic; margin: 0 0 4mm; letter-spacing: -0.01em; }
+  h3 { font-size: 11.5pt; font-weight: 800; margin: 5mm 0 1.5mm; color: var(--azul-osc); }
+  p { margin: 0 0 2.5mm; }
+  ul { margin: 0 0 3mm; padding-left: 5mm; }
+  li { margin-bottom: 1mm; }
+
+  /* Portada */
+  .portada { height: 297mm; background: var(--azul); color: #fff; position: relative; overflow: hidden; page-break-after: always; padding: 30mm 22mm; }
+  .portada .logo-caja { background: #fff; border-radius: 4mm; padding: 7mm 9mm; display: inline-block; }
+  .portada .logo-caja img { width: 70mm; display: block; }
+  .portada .etiqueta { margin-top: 32mm; font-size: 10pt; letter-spacing: .18em; text-transform: uppercase; opacity: .8; font-weight: 600; }
+  .portada h1 { color: #fff; font-size: 38pt; font-weight: 900; font-style: italic; margin: 4mm 0 6mm; letter-spacing: -0.02em; }
+  .portada .sub { font-size: 13pt; max-width: 130mm; opacity: .92; }
+  .portada .estela { position: absolute; left: -10mm; right: -10mm; bottom: 58mm; height: 40mm; }
+  .portada .datos { position: absolute; left: 22mm; right: 22mm; bottom: 22mm; display: flex; justify-content: space-between; font-size: 9.5pt; opacity: .85; border-top: 1px solid rgba(255,255,255,.3); padding-top: 4mm; }
+
+  /* Bloques */
+  .seccion { page-break-inside: avoid; margin-bottom: 8mm; }
+  .num { display: inline-block; font-size: 9pt; font-weight: 800; color: #fff; background: var(--azul); border-radius: 2mm; padding: .6mm 2.2mm; margin-right: 2mm; font-style: normal; vertical-align: 3pt; }
+  .objetivo { font-size: 9.5pt; color: var(--gris); margin: -2mm 0 3mm; }
+  .texto-web { border-left: 1.2mm solid var(--azul); background: var(--fondo); padding: 4mm 5mm; border-radius: 0 2mm 2mm 0; margin: 2mm 0 3mm; }
+  .texto-web .titular { font-size: 15pt; font-weight: 900; font-style: italic; color: var(--azul); line-height: 1.2; margin-bottom: 2mm; }
+  .lbl { font-size: 8pt; font-weight: 700; color: var(--gris); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .8mm; display: block; }
+  .pend { display: inline-block; background: #FFF9B0; border: 1px solid #E8DB2A; color: #5A5200; font-size: 8.5pt; font-weight: 600; padding: .2mm 1.8mm; border-radius: 1.5mm; }
+  .aprobar { display: inline-block; background: #FFE3FF; border: 1px solid #F09BF0; color: #6B006B; font-size: 8.5pt; font-weight: 700; padding: .2mm 1.8mm; border-radius: 1.5mm; margin-left: 2mm; vertical-align: 2pt; }
+  table { width: 100%; border-collapse: collapse; margin: 2mm 0 3mm; font-size: 9.8pt; }
+  th, td { text-align: left; padding: 2.2mm 3mm; border-bottom: 1px solid var(--linea); vertical-align: top; }
+  th { background: var(--azul); color: #fff; font-weight: 700; }
+  .stats { display: flex; gap: 4mm; margin: 3mm 0; }
+  .stats div { flex: 1; background: #fff; border: 1px solid var(--linea); border-radius: 2mm; padding: 3mm; text-align: center; }
+  .stats b { display: block; font-size: 17pt; font-weight: 900; font-style: italic; color: var(--azul); }
+  .stats span { font-size: 8.5pt; color: var(--gris); }
+  .dos { display: flex; gap: 5mm; }
+  .dos > div { flex: 1; }
+  .faq b { color: var(--azul-osc); }
+  .faq p { margin-bottom: 3mm; }
+  .intro { font-size: 11pt; }
+  .leyenda { display: flex; gap: 5mm; font-size: 9pt; margin: 4mm 0 8mm; padding: 3mm 4mm; border: 1px dashed var(--linea); border-radius: 2mm; }
+  .preguntas li { margin-bottom: 2.5mm; }
+  .preguntas .resp { display: block; border-bottom: 1px solid #B9C0CC; height: 6mm; margin-top: 1mm; }
+  .salto { page-break-before: always; }
+  .pie { font-size: 8.5pt; color: var(--gris); margin-top: 10mm; border-top: 1px solid var(--linea); padding-top: 3mm; }
+</style>
+</head>
+<body>
+
+<section class="portada">
+  <div class="logo-caja"><img src="../../marca/logo-gal-publicidad-urbana.png" alt="GAL Publicidad Urbana"></div>
+  <div class="etiqueta">Página web · Borrador 1</div>
+  <h1>Textos de la nueva<br>página de GAL Publicidad</h1>
+  <p class="sub">Documento para revisión. Contiene la estructura de la página, los textos de cada sección y los datos que necesitamos de GAL para terminarla.</p>
+  <svg class="estela" viewBox="0 0 800 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 110 C 260 90, 520 40, 800 10" stroke="#FFF301" stroke-width="12" fill="none"/>
+    <path d="M0 116 C 260 98, 520 56, 800 32" stroke="#FF01FF" stroke-width="12" fill="none"/>
+    <path d="M0 122 C 260 106, 520 72, 800 54" stroke="#01FFFF" stroke-width="12" fill="none"/>
+    <path d="M0 128 C 260 114, 520 88, 800 76" stroke="#333333" stroke-width="12" fill="none"/>
+  </svg>
+  <div class="datos"><span>Preparado por: Héctor Alexis</span><span>Octubre 2026</span></div>
+</section>
+
+<section class="seccion intro">
+  <h2>Cómo revisar este documento</h2>
+  <p>La página tiene un solo objetivo: que las empresas que la visiten <b>soliciten una cotización</b>. Cada sección cumple una función para llegar a ese objetivo.</p>
+  <p>Los textos en los recuadros grises son los que aparecerán en la página. Les pedimos revisar que todo sea correcto y que suene como GAL.</p>
+  <div class="leyenda">
+    <span><span class="pend">Pendiente</span> Dato que necesitamos de GAL</span>
+    <span><span class="aprobar">Por aprobar</span> Texto que redactamos y GAL debe aprobar</span>
+  </div>
+
+  <h3>Estructura de la página (en orden)</h3>
+  <table>
+    <tr><th style="width:8%">#</th><th style="width:32%">Sección</th><th>Para qué sirve</th></tr>
+    <tr><td>1</td><td>Inicio</td><td>Decir qué es GAL en 3 segundos</td></tr>
+    <tr><td>2</td><td>Empresas que confían</td><td>Dar confianza con los logos de clientes</td></tr>
+    <tr><td>3</td><td>Nosotros</td><td>Quiénes somos, misión, visión y valores</td></tr>
+    <tr><td>4</td><td>Por qué publicidad en transporte</td><td>Ventaja frente a un anuncio fijo</td></tr>
+    <tr><td>5</td><td>Campañas realizadas</td><td>Fotos reales de trabajos hechos</td></tr>
+    <tr><td>6</td><td>Servicios</td><td>Qué se puede contratar</td></tr>
+    <tr><td>7</td><td>Proceso de trabajo</td><td>Mostrar que todo es ordenado y sencillo</td></tr>
+    <tr><td>8</td><td>Preguntas frecuentes</td><td>Resolver dudas sin necesidad de llamar</td></tr>
+    <tr><td>9</td><td>Solicitar cotización</td><td>Formulario y datos de contacto</td></tr>
+  </table>
+  <p>Además: un <b>botón de WhatsApp</b> fijo en toda la página y un <b>Aviso de Privacidad</b> (obligatorio por ley porque el formulario pide datos personales).</p>
+</section>
+
+<section class="seccion salto">
+  <h2><span class="num">1</span>Inicio</h2>
+  <p class="objetivo">Lo primero que se ve al abrir la página.</p>
+  <div class="texto-web">
+    <span class="lbl">Etiqueta superior</span>
+    <p>Publicidad en transporte · 9 años de experiencia</p>
+    <span class="lbl">Titular</span>
+    <div class="titular">Publicidad que no se queda quieta.</div>
+    <span class="lbl">Botones</span>
+    <p>[ Solicitar cotización ] &nbsp; [ Contacto por WhatsApp ] <span class="pend">Número de WhatsApp</span></p>
+    <div class="stats">
+      <div><b>9 años</b><span>de experiencia</span></div>
+      <div><b>300–500</b><span>vehículos rotulados al año</span></div>
+      <div><b>Hasta ~100</b><span>unidades por campaña</span></div>
+    </div>
+  </div>
+  <p>Acompañado de una foto real de una unidad rotulada por GAL.</p>
+</section>
+
+<section class="seccion">
+  <h2><span class="num">2</span>Empresas que confían</h2>
+  <div class="texto-web">
+    <div class="titular">Empresas que confían en GAL Publicidad</div>
+    <p>Kolors · Price Shoes · Botanas El Sol · Universidad Humanitas</p>
+  </div>
+  <p><span class="pend">Logos de los 4 clientes en buena calidad (PNG o SVG)</span></p>
+</section>
+
+<section class="seccion">
+  <h2><span class="num">3</span>Nosotros</h2>
+  <div class="texto-web">
+    <div class="titular">Quiénes somos</div>
+    <p>GAL Publicidad es una empresa mexicana especializada en publicidad en vehículos de transporte. Desde hace 9 años desarrollamos campañas para marcas nacionales y regionales, y cada año rotulamos entre 300 y 500 unidades.</p>
+    <p>Rotulamos las unidades de nuestros clientes: combis, camionetas, taxis, camiones y unidades de transporte privado. Ofrecemos un servicio integral: diseñamos, imprimimos e instalamos los anuncios, y supervisamos su estado durante toda la campaña. Complementamos nuestro servicio con impresión digital de viniles y lonas, y recorte de vinil.</p>
+  </div>
+  <div class="dos">
+    <div class="texto-web">
+      <span class="lbl">Misión <span class="aprobar">Por aprobar</span></span>
+      <p>Llevar la marca de nuestros clientes a las calles mediante campañas de publicidad en transporte que gestionamos de principio a fin, con calidad, puntualidad y seguimiento constante.</p>
+    </div>
+    <div class="texto-web">
+      <span class="lbl">Visión <span class="aprobar">Por aprobar</span></span>
+      <p>Ser la empresa de referencia en publicidad en transporte en México, reconocida por marcas y agencias por la calidad de sus instalaciones y el cumplimiento de cada campaña.</p>
+    </div>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="texto-web">
+    <span class="lbl">Valores <span class="aprobar">Por aprobar</span></span>
+    <ul>
+      <li><b>Cumplimiento:</b> respetamos los tiempos y acuerdos de cada campaña.</li>
+      <li><b>Calidad:</b> cuidamos cada detalle, desde el diseño hasta la instalación del vinil.</li>
+      <li><b>Transparencia:</b> cotizaciones claras, con medidas, diseño y precio final desglosados.</li>
+      <li><b>Compromiso:</b> supervisamos los anuncios durante toda la campaña y los reemplazamos si se dañan.</li>
+      <li><b>Servicio integral:</b> un solo proveedor responsable de todo el proceso.</li>
+    </ul>
+    <span class="lbl">Nuestros compromisos con cada cliente</span>
+    <ul>
+      <li>Un solo punto de contacto durante toda la campaña.</li>
+      <li>Supervisión constante de las unidades y reemplazo del vinil dañado.</li>
+      <li>Tiempos de entrega definidos desde la cotización, según la complejidad del proyecto.</li>
+      <li>Facturación <span class="pend">¿Emiten factura?</span></li>
+      <li>Reporte de campaña <span class="pend">¿Entregan fotos o reporte al cliente?</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="seccion salto">
+  <h2><span class="num">4</span>Por qué publicidad en transporte</h2>
+  <div class="texto-web">
+    <div class="titular">Mayor cobertura que un anuncio fijo</div>
+    <table>
+      <tr><th>Espectacular fijo</th><th>Publicidad en transporte</th></tr>
+      <tr><td>Visible solo en una ubicación</td><td>Visible en todo su recorrido</td></tr>
+      <tr><td>Un solo punto de la ciudad</td><td>Varias zonas al mismo tiempo</td></tr>
+      <tr><td>Compite con otros anuncios en la misma vista</td><td>Circula a nivel de calle, en el tráfico diario</td></tr>
+      <tr><td>Se queda donde se instaló</td><td>Se mueve hacia donde está su público</td></tr>
+    </table>
+    <p>Su marca permanece visible todos los días, durante toda la campaña.</p>
+  </div>
+  <p style="font-size:9pt;color:var(--gris)">Nota: no incluimos cifras como “30,000 impresiones diarias” porque no encontramos estudios que las respalden. Preferimos usar datos reales de GAL.</p>
+</section>
+
+<section class="seccion">
+  <h2><span class="num">5</span>Campañas realizadas</h2>
+  <div class="texto-web">
+    <div class="titular">Campañas realizadas</div>
+    <p><b>Price Shoes</b> — Rotulación integral de combis y taxis para su campaña de afiliación “Hazla Price”.<br>
+    Unidades: <span class="pend">Pendiente</span> · Duración: <span class="pend">Pendiente</span></p>
+    <p><b>Kolors</b> — Aplicación de identidad de marca en camionetas de pasajeros: cofre y costados.<br>
+    Unidades: <span class="pend">Pendiente</span> · Duración: <span class="pend">Pendiente</span></p>
+    <p><b>Botanas El Sol</b> <span class="pend">Fotos y datos de la campaña</span></p>
+    <p><b>Universidad Humanitas</b> <span class="pend">Fotos y datos de la campaña</span></p>
+    <p><b>Testimonio</b> (opcional) <span class="pend">Una frase de algún cliente, con nombre y cargo</span></p>
+  </div>
+</section>
+
+<section class="seccion">
+  <h2><span class="num">6</span>Servicios</h2>
+  <div class="texto-web">
+    <div class="titular">Nuestros servicios</div>
+    <table>
+      <tr><th style="width:30%">Servicio</th><th>Descripción</th></tr>
+      <tr><td><b>Campañas en transporte</b><br><span style="font-size:8.5pt;color:var(--gris)">Servicio principal</span></td><td>Rotulamos las unidades de su empresa con la imagen de su marca: combis, camionetas, taxis, camiones y unidades de transporte privado. Incluye diseño, impresión, instalación y mantenimiento. Recomendamos campañas de más de 3 meses: mayor presencia y mejor costo.</td></tr>
+      <tr><td><b>Impresión digital</b></td><td>Impresión de viniles y lonas en gran formato para vehículos, fachadas, eventos y puntos de venta.</td></tr>
+      <tr><td><b>Recorte de vinil</b></td><td>Letras, logotipos y gráficos recortados en vinil para vehículos, aparadores y señalización.</td></tr>
+    </table>
+    <p>El tiempo de entrega depende de la complejidad de cada proyecto y se indica en su cotización.</p>
+  </div>
+</section>
+
+<section class="seccion salto">
+  <h2><span class="num">7</span>Proceso de trabajo</h2>
+  <div class="texto-web">
+    <div class="titular">Un proceso completo, con un solo proveedor</div>
+    <ol style="padding-left:5mm;margin:0 0 3mm">
+      <li><b>Solicitud.</b> Nos comparte su proyecto: tipo y número de unidades, y fecha de inicio.</li>
+      <li><b>Diseño.</b> Adaptamos su anuncio a cada tipo de unidad, o trabajamos con su diseño.</li>
+      <li><b>Impresión.</b> Imprimimos el vinil con materiales para exterior.</li>
+      <li><b>Instalación.</b> Rotulamos las unidades y la campaña sale a la calle.</li>
+      <li><b>Supervisión y mantenimiento.</b> Revisamos los anuncios constantemente y reemplazamos el vinil que se dañe.</li>
+    </ol>
+    <p>El tiempo de entrega depende de la complejidad del proyecto y se lo indicamos desde la cotización.</p>
+  </div>
+</section>
+
+<section class="seccion faq">
+  <h2><span class="num">8</span>Preguntas frecuentes</h2>
+  <div class="texto-web">
+    <p><b>¿Ustedes proporcionan los vehículos?</b><br>No. Rotulamos las unidades de su empresa: combis, camionetas, taxis, camiones y unidades de transporte privado. Usted define los vehículos y sus rutas; nosotros nos encargamos de la publicidad.</p>
+    <p><b>¿Cuánto tiempo tarda en iniciar una campaña?</b><br>Depende de la complejidad del proyecto: número de unidades, tipo de vehículo y diseño. Le indicamos el tiempo de entrega desde la cotización.</p>
+    <p><b>¿Cuántas unidades puedo rotular?</b><br>Desde pocas unidades hasta alrededor de 100 por campaña. <span class="pend">¿Hay un mínimo de unidades?</span></p>
+    <p><b>¿Cuál es la duración recomendada?</b><br>Más de 3 meses: su marca gana presencia y el costo mensual disminuye.</p>
+    <p><b>¿Qué ocurre si un anuncio se daña?</b><br>Supervisamos las unidades de forma constante. Si el vinil se daña, lo reemplazamos.</p>
+    <p><b>¿El diseño está incluido?</b><br>Podemos diseñar su anuncio o trabajar con el diseño que usted ya tenga. El costo del diseño se indica por separado en la cotización.</p>
+    <p><b>¿Cuál es el costo?</b><br>Depende del número y tipo de unidades, el tamaño del rotulado y la duración. Le enviamos una cotización con medidas, diseño y precio final. <span class="pend">¿En cuánto tiempo responden?</span></p>
+    <p><b>¿Emiten factura?</b> <span class="pend">Confirmar</span></p>
+  </div>
+</section>
+
+<section class="seccion salto">
+  <h2><span class="num">9</span>Solicitar cotización</h2>
+  <div class="texto-web">
+    <div class="titular">Solicite su cotización</div>
+    <p>Compártanos los detalles de su proyecto y le enviaremos una propuesta con medidas, diseño y precio final.</p>
+    <table>
+      <tr><th>Campo del formulario</th><th>Tipo</th><th>Obligatorio</th></tr>
+      <tr><td>Nombre</td><td>Texto</td><td>Sí</td></tr>
+      <tr><td>Empresa</td><td>Texto</td><td>Sí</td></tr>
+      <tr><td>Cargo</td><td>Texto</td><td>No</td></tr>
+      <tr><td>Correo o teléfono</td><td>Texto</td><td>Sí</td></tr>
+      <tr><td>Servicio de interés</td><td>Campaña en transporte · Impresión digital · Recorte de vinil</td><td>Sí</td></tr>
+      <tr><td>Tipo de vehículo</td><td>Combi · Camioneta · Taxi · Camión · Transporte privado · Otro</td><td>No</td></tr>
+      <tr><td>Número de unidades</td><td>Número</td><td>No</td></tr>
+      <tr><td>¿Requiere diseño?</td><td>Sí · No · Ya cuento con diseño</td><td>No</td></tr>
+      <tr><td>Fecha de inicio aproximada</td><td>Fecha</td><td>No</td></tr>
+    </table>
+    <span class="lbl">Datos de contacto junto al formulario</span>
+    <p>WhatsApp <span class="pend">Pendiente</span> · Teléfono <span class="pend">Pendiente</span> · Correo: galpublicidad@gmail.com · Dirección o ciudad <span class="pend">Pendiente</span> · Horario <span class="pend">Pendiente</span></p>
+  </div>
+  <h3>Pie de página</h3>
+  <p>Logo de GAL con la frase <b>“Al alcance de ti”</b>, enlaces a las secciones, datos de contacto, redes sociales, Aviso de Privacidad, razón social y © 2026 GAL Publicidad.</p>
+</section>
+
+<section class="seccion salto preguntas">
+  <h2>Lo que necesitamos de GAL</h2>
+  <p>Con estos datos podemos terminar los textos y pasar al diseño.</p>
+  <ol>
+    <li><b>Aprobar o corregir</b> la misión, la visión y los valores (sección 3).<span class="resp"></span></li>
+    <li>Número de <b>WhatsApp</b>, <b>teléfono</b>, <b>dirección</b> (o solo ciudad) y <b>horario de atención</b>.<span class="resp"></span></li>
+    <li><b>Logos</b> de Kolors, Price Shoes, Botanas El Sol y Universidad Humanitas en buena calidad.<span class="resp"></span></li>
+    <li>Datos de las campañas de Price Shoes y Kolors: <b>número de unidades y duración</b>.<span class="resp"></span></li>
+    <li><b>Fotos</b> de las campañas de Botanas El Sol y Universidad Humanitas.<span class="resp"></span></li>
+    <li>¿Entregan <b>fotos o reporte</b> al cliente durante la campaña?<span class="resp"></span></li>
+    <li>¿Emiten <b>factura</b>? ¿Hay un <b>mínimo de unidades</b> por campaña?<span class="resp"></span></li>
+    <li>¿En cuánto tiempo <b>responden una cotización</b>?<span class="resp"></span></li>
+    <li>Una <b>frase de algún cliente</b> (testimonio), con nombre y cargo.<span class="resp"></span></li>
+    <li>Usuario de <b>Instagram</b>, <b>LinkedIn</b> (si tienen) y <b>razón social</b> de la empresa.<span class="resp"></span></li>
+  </ol>
+  <p class="pie">GAL Publicidad · Publicidad urbana · “Al alcance de ti” — Borrador 1 de textos, octubre 2026.</p>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GAL Publicidad · Bosquejo de la página</title>
+<style>
+  :root {
+    --azul: #00339B; --azul-osc: #001A4D; --amarillo: #FFF301; --magenta: #FF01FF;
+    --cian: #01FFFF; --negro: #333333; --gris: #666666; --linea: #E2E6EE; --fondo: #F5F7FB;
+    --nota: #FF01FF;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Inter", sans-serif; color: #1B2130; background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .contenedor { width: 1120px; margin: 0 auto; }
+  .titular { font-weight: 900; font-style: italic; letter-spacing: -0.025em; line-height: 1.02; }
+  .eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+  .btn { display: inline-block; padding: 15px 26px; border-radius: 999px; font-weight: 700; font-size: 15px; text-decoration: none; }
+  .btn-prim { background: var(--amarillo); color: var(--azul-osc); }
+  .btn-sec { border: 2px solid rgba(255,255,255,.6); color: #fff; }
+  .btn-azul { background: var(--azul); color: #fff; }
+  section { position: relative; }
+
+  /* Notas del bosquejo */
+  .nota { position: absolute; z-index: 5; background: #fff; border: 2px dashed var(--nota); color: #7A007A; font-size: 13px; line-height: 1.35; padding: 8px 12px; border-radius: 8px; max-width: 250px; font-weight: 600; box-shadow: 0 4px 14px rgba(0,0,0,.08); }
+  .nota::before { content: "✎ "; }
+  .banda-bosquejo { background: var(--negro); color: #fff; text-align: center; font-size: 13px; padding: 9px; letter-spacing: .04em; }
+  .banda-bosquejo b { color: var(--amarillo); }
+
+  /* Menú */
+  header { position: absolute; top: 0; left: 0; right: 0; z-index: 4; }
+  header .contenedor { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; }
+  .logo-blanco { background: #fff; border-radius: 10px; padding: 8px 12px; display: flex; }
+  .logo-blanco img { height: 40px; }
+  nav { display: flex; gap: 28px; color: #fff; font-size: 15px; font-weight: 500; align-items: center; }
+  nav .btn { padding: 11px 20px; font-size: 14px; }
+
+  /* Hero */
+  .hero { background: var(--azul-osc); color: #fff; height: 820px; overflow: hidden; }
+  .hero .foto { position: absolute; inset: 0; background: url(../../marca/fotos/priceshoes-combi-lateral.jpg) 60% 55%/cover; }
+  .hero .velo { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,26,77,.97) 0%, rgba(0,26,77,.88) 38%, rgba(0,26,77,.25) 70%, rgba(0,26,77,.1) 100%); }
+  .hero .contenido { position: relative; z-index: 2; padding-top: 175px; }
+  .hero .eyebrow { color: var(--cian); }
+  .hero h1 { font-size: 92px; margin: 16px 0 34px; max-width: 900px; }
+  .hero .botones { display: flex; gap: 14px; }
+  .hero .estela { position: absolute; left: 0; right: 0; bottom: 104px; height: 120px; z-index: 1; opacity: .95; }
+  .stats { position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; background: rgba(255,255,255,.08); backdrop-filter: blur(6px); border-top: 1px solid rgba(255,255,255,.18); }
+  .stats .contenedor { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .stats div div { padding: 24px 0; }
+  .stats b { font-size: 40px; font-weight: 900; font-style: italic; display: block; }
+  .stats span { font-size: 14px; opacity: .8; }
+
+  /* Logos */
+  .logos { padding: 56px 0; border-bottom: 1px solid var(--linea); }
+  .logos p { text-align: center; color: var(--gris); font-size: 14px; margin: 0 0 26px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+  .fila-logos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .fila-logos div { height: 78px; border: 2px dashed #C6CCD8; border-radius: 12px; display: grid; place-items: center; color: #8A93A6; font-weight: 800; font-size: 18px; }
+
+  /* Nosotros */
+  .nosotros { padding: 110px 0; }
+  .nos-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 70px; align-items: start; }
+  .nosotros .eyebrow, .seccion-clara .eyebrow { color: var(--azul); }
+  .nosotros h2 { font-size: 62px; color: var(--azul); margin: 14px 0 26px; }
+  .nosotros p { font-size: 18px; line-height: 1.65; color: #3A4254; margin: 0 0 16px; }
+  .mv { display: grid; gap: 18px; }
+  .mv div { background: var(--fondo); border-radius: 18px; padding: 28px 30px; border-left: 6px solid var(--azul); }
+  .mv div:nth-child(2) { border-left-color: var(--magenta); }
+  .mv h3 { margin: 0 0 8px; font-size: 22px; font-style: italic; font-weight: 900; color: var(--azul); }
+  .mv p { font-size: 16px; margin: 0; }
+  .valores { margin-top: 70px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+  .valores div { border: 1px solid var(--linea); border-radius: 16px; padding: 24px 20px; }
+  .valores i { display: block; width: 40px; height: 40px; border-radius: 10px; margin-bottom: 16px; }
+  .valores b { display: block; font-size: 17px; color: var(--azul-osc); margin-bottom: 6px; }
+  .valores span { font-size: 14px; color: var(--gris); line-height: 1.45; }
+
+  /* Comparativa */
+  .comparativa { background: var(--azul); color: #fff; padding: 110px 0; overflow: hidden; }
+  .comparativa h2 { font-size: 62px; margin: 14px 0 50px; max-width: 760px; }
+  .comparativa .eyebrow { color: var(--amarillo); }
+  .comp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .comp-grid > div { border-radius: 22px; padding: 36px; }
+  .fijo { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); }
+  .movil { background: #fff; color: var(--azul-osc); }
+  .comp-grid h3 { margin: 0 0 22px; font-size: 24px; font-style: italic; font-weight: 900; }
+  .comp-grid li { font-size: 17px; margin-bottom: 14px; list-style: none; padding-left: 30px; position: relative; }
+  .fijo li::before { content: "—"; position: absolute; left: 0; opacity: .6; }
+  .movil li::before { content: "✓"; position: absolute; left: 0; color: var(--azul); font-weight: 900; }
+  .comp-grid ul { padding: 0; margin: 0; }
+
+  /* Casos */
+  .casos { padding: 110px 0; background: var(--fondo); }
+  .casos h2 { font-size: 62px; color: var(--azul); margin: 14px 0 46px; }
+  .casos-grid { display: grid; grid-template-columns: 1.35fr 1fr; grid-template-rows: 330px 330px; gap: 20px; }
+  .caso { border-radius: 22px; overflow: hidden; position: relative; background: #ccd; }
+  .caso img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .caso .pie { position: absolute; left: 0; right: 0; bottom: 0; padding: 22px 24px; background: linear-gradient(transparent, rgba(0,0,0,.78)); color: #fff; }
+  .caso .pie b { font-size: 22px; font-style: italic; font-weight: 900; display: block; }
+  .caso .pie span { font-size: 14px; opacity: .9; }
+  .caso.grande { grid-row: span 2; }
+  .caso.vacio { background: #fff; border: 2px dashed #C6CCD8; display: grid; place-items: center; color: #8A93A6; font-weight: 700; text-align: center; padding: 20px; }
+
+  /* Servicios */
+  .servicios { padding: 110px 0; }
+  .servicios h2 { font-size: 62px; color: var(--azul); margin: 14px 0 46px; }
+  .serv-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 20px; }
+  .serv { border-radius: 22px; padding: 34px; border: 1px solid var(--linea); display: flex; flex-direction: column; min-height: 360px; }
+  .serv.principal { background: var(--azul); color: #fff; border: none; position: relative; overflow: hidden; }
+  .serv h3 { font-size: 28px; font-style: italic; font-weight: 900; margin: 0 0 14px; color: var(--azul); }
+  .serv.principal h3 { color: #fff; }
+  .serv p { font-size: 16px; line-height: 1.6; color: #4A5266; margin: 0 0 22px; flex: 1; }
+  .serv.principal p { color: rgba(255,255,255,.85); }
+  .serv .chip { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; color: var(--azul-osc); background: var(--amarillo); border-radius: 999px; padding: 6px 12px; align-self: flex-start; margin-bottom: 20px; }
+  .serv a { font-weight: 700; color: var(--azul); text-decoration: none; }
+  .serv.principal a { color: var(--amarillo); }
+  .serv .barra { height: 8px; width: 70px; border-radius: 4px; margin-bottom: 26px; }
+  .nota-tiempo { margin-top: 22px; font-size: 15px; color: var(--gris); }
+
+  /* Proceso */
+  .proceso { padding: 100px 0 110px; background: var(--azul-osc); color: #fff; }
+  .proceso .eyebrow { color: var(--cian); }
+  .proceso h2 { font-size: 58px; margin: 14px 0 60px; }
+  .pasos { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
+  .pasos::before { content: ""; position: absolute; top: 27px; left: 28px; right: 28px; height: 4px; background: linear-gradient(90deg, var(--amarillo), var(--magenta), var(--cian), #fff); border-radius: 2px; }
+  .paso { padding-right: 22px; position: relative; }
+  .paso .n { width: 58px; height: 58px; border-radius: 50%; background: #fff; color: var(--azul-osc); display: grid; place-items: center; font-weight: 900; font-style: italic; font-size: 22px; margin-bottom: 22px; position: relative; }
+  .paso b { display: block; font-size: 19px; margin-bottom: 8px; }
+  .paso span { font-size: 14.5px; opacity: .78; line-height: 1.5; }
+
+  /* FAQ */
+  .faq { padding: 110px 0; }
+  .faq-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 70px; }
+  .faq h2 { font-size: 58px; color: var(--azul); margin: 14px 0 0; }
+  .faq .eyebrow { color: var(--azul); }
+  .pregunta { border-bottom: 1px solid var(--linea); padding: 22px 0; display: flex; justify-content: space-between; gap: 20px; font-size: 18px; font-weight: 700; color: var(--azul-osc); }
+  .pregunta i { font-style: normal; color: var(--azul); font-size: 26px; line-height: 1; }
+  .pregunta.abierta { flex-direction: column; }
+  .pregunta.abierta div { display: flex; justify-content: space-between; }
+  .pregunta.abierta p { font-weight: 400; font-size: 16px; color: #4A5266; margin: 10px 0 0; line-height: 1.6; }
+
+  /* Cotización */
+  .cotiza { padding: 110px 0; background: var(--azul); color: #fff; overflow: hidden; }
+  .cot-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 70px; }
+  .cotiza .eyebrow { color: var(--amarillo); }
+  .cotiza h2 { font-size: 62px; margin: 14px 0 22px; }
+  .cotiza p { font-size: 18px; line-height: 1.6; opacity: .9; }
+  .contacto { margin-top: 36px; display: grid; gap: 14px; font-size: 16px; }
+  .contacto div { display: flex; gap: 12px; align-items: center; }
+  .contacto i { width: 36px; height: 36px; border-radius: 10px; background: rgba(255,255,255,.12); display: grid; place-items: center; font-style: normal; }
+  .form { background: #fff; color: #1B2130; border-radius: 24px; padding: 36px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .campo { display: flex; flex-direction: column; gap: 6px; }
+  .campo.ancho { grid-column: span 2; }
+  .campo label { font-size: 13px; font-weight: 700; color: #4A5266; }
+  .campo div { height: 46px; border: 1.5px solid #D5DBE6; border-radius: 10px; font-size: 14px; color: #9AA3B5; display: flex; align-items: center; padding: 0 14px; justify-content: space-between; }
+  .form .enviar { grid-column: span 2; text-align: center; padding: 17px; border-radius: 12px; background: var(--azul); color: #fff; font-weight: 800; font-size: 16px; }
+  .form .aviso { grid-column: span 2; font-size: 13px; color: #4A5266; display: flex; gap: 8px; align-items: center; }
+  .form .aviso span { width: 18px; height: 18px; border: 1.5px solid #B9C1D0; border-radius: 4px; display: inline-block; }
+
+  footer { background: var(--azul-osc); color: rgba(255,255,255,.8); padding: 60px 0 40px; font-size: 14px; }
+  .pie-grid { display: flex; justify-content: space-between; align-items: flex-start; }
+  .pie-grid .frase { font-size: 30px; font-style: italic; font-weight: 900; color: #fff; margin-top: 18px; }
+  .pie-grid ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .legal { border-top: 1px solid rgba(255,255,255,.15); margin-top: 40px; padding-top: 20px; display: flex; justify-content: space-between; font-size: 13px; opacity: .7; }
+
+  .whatsapp { position: absolute; right: 36px; width: 64px; height: 64px; border-radius: 50%; background: #25D366; display: grid; place-items: center; box-shadow: 0 8px 22px rgba(0,0,0,.25); z-index: 6; }
+  .whatsapp svg { width: 34px; height: 34px; }
+</style>
+</head>
+<body>
+
+<div class="banda-bosquejo"><b>BOSQUEJO 1</b> · Así se vería la página de GAL Publicidad en computadora · Las notas punteadas en rosa explican el diseño y no aparecen en la página real</div>
+
+<!-- 1. INICIO -->
+<section class="hero">
+  <div class="foto"></div>
+  <div class="velo"></div>
+  <header>
+    <div class="contenedor">
+      <div class="logo-blanco"><img src="../../marca/logo-gal-publicidad-urbana.png" alt="GAL"></div>
+      <nav><span>Nosotros</span><span>Clientes</span><span>Servicios</span><span>Proceso</span><span>Preguntas</span><a class="btn btn-prim">Solicitar cotización</a></nav>
+    </div>
+  </header>
+  <svg class="estela" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 112 C 480 104, 980 60, 1440 4" stroke="#FFF301" stroke-width="10" fill="none"/>
+    <path d="M0 116 C 480 110, 980 74, 1440 26" stroke="#FF01FF" stroke-width="10" fill="none"/>
+    <path d="M0 120 C 480 116, 980 88, 1440 48" stroke="#01FFFF" stroke-width="10" fill="none"/>
+    <path d="M0 124 C 480 122, 980 102, 1440 70" stroke="#333333" stroke-width="10" fill="none"/>
+  </svg>
+  <div class="contenedor contenido">
+    <div class="eyebrow">Publicidad en transporte · 9 años de experiencia</div>
+    <h1 class="titular">Publicidad que no se queda quieta.</h1>
+    <div class="botones"><a class="btn btn-prim">Solicitar cotización</a><a class="btn btn-sec">Contacto por WhatsApp</a></div>
+  </div>
+  <div class="stats">
+    <div class="contenedor">
+      <div><div><b>9 años</b><span>de experiencia</span></div></div>
+      <div><div><b>300–500</b><span>vehículos rotulados al año</span></div></div>
+      <div><div><b>Hasta ~100</b><span>unidades por campaña</span></div></div>
+    </div>
+  </div>
+  <div class="nota" style="top:120px; right:60px;">Foto real de una unidad rotulada por GAL. La combi puede “avanzar” un poco al bajar con el ratón.</div>
+  <div class="nota" style="bottom:150px; right:60px;">Las 4 líneas de colores del logo se dibujan solas al abrir la página.</div>
+</section>
+
+<!-- 2. LOGOS -->
+<section class="logos">
+  <div class="contenedor">
+    <p>Empresas que confían en GAL Publicidad</p>
+    <div class="fila-logos"><div>Kolors</div><div>Price Shoes</div><div>Botanas El Sol</div><div>Humanitas</div></div>
+  </div>
+  <div class="nota" style="top:14px; right:40px;">Aquí van los logos reales (pendiente que GAL los envíe).</div>
+</section>
+
+<!-- 3. NOSOTROS -->
+<section class="nosotros">
+  <div class="contenedor">
+    <div class="nos-grid">
+      <div>
+        <div class="eyebrow">Nosotros</div>
+        <h2 class="titular">Quiénes somos</h2>
+        <p>GAL Publicidad es una empresa mexicana especializada en publicidad en vehículos de transporte. Desde hace 9 años desarrollamos campañas para marcas nacionales y regionales, y cada año rotulamos entre 300 y 500 unidades.</p>
+        <p>Rotulamos las unidades de nuestros clientes: combis, camionetas, taxis, camiones y unidades de transporte privado. Diseñamos, imprimimos, instalamos y supervisamos cada anuncio durante toda la campaña.</p>
+      </div>
+      <div class="mv">
+        <div><h3>Misión</h3><p>Llevar la marca de nuestros clientes a las calles mediante campañas de publicidad en transporte que gestionamos de principio a fin, con calidad, puntualidad y seguimiento constante.</p></div>
+        <div><h3>Visión</h3><p>Ser la empresa de referencia en publicidad en transporte en México, reconocida por marcas y agencias por la calidad de sus instalaciones y el cumplimiento de cada campaña.</p></div>
+      </div>
+    </div>
+    <div class="valores">
+      <div><i style="background:var(--azul)"></i><b>Cumplimiento</b><span>Respetamos los tiempos y acuerdos de cada campaña.</span></div>
+      <div><i style="background:var(--amarillo)"></i><b>Calidad</b><span>Del diseño a la instalación del vinil.</span></div>
+      <div><i style="background:var(--magenta)"></i><b>Transparencia</b><span>Cotizaciones claras y desglosadas.</span></div>
+      <div><i style="background:var(--cian)"></i><b>Compromiso</b><span>Supervisión y reemplazo del vinil dañado.</span></div>
+      <div><i style="background:var(--negro)"></i><b>Servicio integral</b><span>Un solo proveedor para todo el proceso.</span></div>
+    </div>
+  </div>
+  <div class="nota" style="top:60px; right:40px;">Los valores usan los 4 colores del logo + el azul GAL.</div>
+</section>
+
+<!-- 4. COMPARATIVA -->
+<section class="comparativa">
+  <div class="contenedor">
+    <div class="eyebrow">Por qué publicidad en transporte</div>
+    <h2 class="titular">Mayor cobertura que un anuncio fijo</h2>
+    <div class="comp-grid">
+      <div class="fijo"><h3>Espectacular fijo</h3><ul>
+        <li>Visible solo en una ubicación</li><li>Un solo punto de la ciudad</li><li>Compite con otros anuncios en la misma vista</li><li>Se queda donde se instaló</li></ul></div>
+      <div class="movil"><h3>Publicidad en transporte</h3><ul>
+        <li>Visible en todo su recorrido</li><li>Varias zonas al mismo tiempo</li><li>Circula a nivel de calle, en el tráfico diario</li><li>Se mueve hacia donde está su público</li></ul></div>
+    </div>
+  </div>
+  <div class="nota" style="top:70px; right:40px;">Las dos columnas aparecen una tras otra al bajar.</div>
+</section>
+
+<!-- 5. CASOS -->
+<section class="casos">
+  <div class="contenedor">
+    <div class="eyebrow" style="color:var(--azul)">Casos de éxito</div>
+    <h2 class="titular">Campañas realizadas</h2>
+    <div class="casos-grid">
+      <div class="caso grande"><img src="../../marca/fotos/priceshoes-taxi-lateral.jpg" alt="" style="object-position:50% 60%"><div class="pie"><b>Price Shoes</b><span>Rotulación integral de combis y taxis · Campaña “Hazla Price”</span></div></div>
+      <div class="caso"><img src="../../marca/fotos/kolors-camioneta-lateral.jpg" alt="" style="object-position:70% 50%"><div class="pie"><b>Kolors</b><span>Identidad de marca en camionetas de pasajeros</span></div></div>
+      <div class="caso vacio">Botanas El Sol · Universidad Humanitas<br><span style="font-weight:500;font-size:14px">(fotos pendientes)</span></div>
+    </div>
+  </div>
+  <div class="nota" style="top:70px; right:40px;">Sección protagonista: fotos reales a gran tamaño. Se tapan las placas antes de publicar.</div>
+</section>
+
+<!-- 6. SERVICIOS -->
+<section class="servicios">
+  <div class="contenedor">
+    <div class="eyebrow" style="color:var(--azul)">Servicios</div>
+    <h2 class="titular">Nuestros servicios</h2>
+    <div class="serv-grid">
+      <div class="serv principal"><span class="chip">Servicio principal</span><h3>Campañas en transporte</h3><p>Rotulamos las unidades de su empresa con la imagen de su marca: combis, camionetas, taxis, camiones y transporte privado. Incluye diseño, impresión, instalación y mantenimiento.</p><a>Cotizar este servicio →</a></div>
+      <div class="serv"><span class="barra" style="background:var(--magenta)"></span><h3>Impresión digital</h3><p>Viniles y lonas en gran formato para vehículos, fachadas, eventos y puntos de venta.</p><a>Cotizar este servicio →</a></div>
+      <div class="serv"><span class="barra" style="background:var(--cian)"></span><h3>Recorte de vinil</h3><p>Letras, logotipos y gráficos recortados en vinil para vehículos, aparadores y señalización.</p><a>Cotizar este servicio →</a></div>
+    </div>
+    <p class="nota-tiempo">El tiempo de entrega depende de la complejidad de cada proyecto y se indica en su cotización.</p>
+  </div>
+</section>
+
+<!-- 7. PROCESO -->
+<section class="proceso">
+  <div class="contenedor">
+    <div class="eyebrow">Proceso de trabajo</div>
+    <h2 class="titular">Un proceso completo, con un solo proveedor</h2>
+    <div class="pasos">
+      <div class="paso"><div class="n">1</div><b>Solicitud</b><span>Tipo y número de unidades, y fecha de inicio.</span></div>
+      <div class="paso"><div class="n">2</div><b>Diseño</b><span>Adaptado a cada tipo de unidad, o con su diseño.</span></div>
+      <div class="paso"><div class="n">3</div><b>Impresión</b><span>Vinil con materiales para exterior.</span></div>
+      <div class="paso"><div class="n">4</div><b>Instalación</b><span>Rotulamos y la campaña sale a la calle.</span></div>
+      <div class="paso"><div class="n">5</div><b>Supervisión</b><span>Revisión constante y reemplazo del vinil dañado.</span></div>
+    </div>
+  </div>
+  <div class="nota" style="top:60px; right:40px;">La línea de colores se va llenando paso a paso al bajar.</div>
+</section>
+
+<!-- 8. PREGUNTAS -->
+<section class="faq">
+  <div class="contenedor faq-grid">
+    <div><div class="eyebrow">Preguntas frecuentes</div><h2 class="titular">Resolvemos sus dudas</h2></div>
+    <div>
+      <div class="pregunta abierta"><div>¿Ustedes proporcionan los vehículos?<i>–</i></div><p>No. Rotulamos las unidades de su empresa: combis, camionetas, taxis, camiones y unidades de transporte privado. Usted define los vehículos y sus rutas; nosotros nos encargamos de la publicidad.</p></div>
+      <div class="pregunta">¿Cuánto tiempo tarda en iniciar una campaña?<i>+</i></div>
+      <div class="pregunta">¿Cuántas unidades puedo rotular?<i>+</i></div>
+      <div class="pregunta">¿Qué ocurre si un anuncio se daña?<i>+</i></div>
+      <div class="pregunta">¿El diseño está incluido?<i>+</i></div>
+      <div class="pregunta">¿Cuál es el costo?<i>+</i></div>
+    </div>
+  </div>
+  <div class="nota" style="top:250px; left:80px;">Cada pregunta se abre al hacer clic.</div>
+</section>
+
+<!-- 9. COTIZACIÓN -->
+<section class="cotiza">
+  <div class="contenedor cot-grid">
+    <div>
+      <div class="eyebrow">Solicitar cotización</div>
+      <h2 class="titular">Solicite su cotización</h2>
+      <p>Compártanos los detalles de su proyecto y le enviaremos una propuesta con medidas, diseño y precio final.</p>
+      <div class="contacto">
+        <div><i>✆</i>WhatsApp · (pendiente)</div>
+        <div><i>☏</i>Teléfono · (pendiente)</div>
+        <div><i>✉</i>galpublicidad@gmail.com</div>
+        <div><i>⌖</i>Dirección · (pendiente)</div>
+      </div>
+    </div>
+    <div class="form">
+      <div class="campo"><label>Nombre *</label><div></div></div>
+      <div class="campo"><label>Empresa *</label><div></div></div>
+      <div class="campo"><label>Cargo</label><div></div></div>
+      <div class="campo"><label>Correo o teléfono *</label><div></div></div>
+      <div class="campo"><label>Servicio de interés *</label><div>Campaña en transporte <span>▾</span></div></div>
+      <div class="campo"><label>Tipo de vehículo</label><div>Seleccione <span>▾</span></div></div>
+      <div class="campo"><label>Número de unidades</label><div></div></div>
+      <div class="campo"><label>¿Requiere diseño?</label><div>Seleccione <span>▾</span></div></div>
+      <div class="campo ancho"><label>Fecha de inicio aproximada</label><div>dd / mm / aaaa</div></div>
+      <div class="aviso"><span></span>Acepto el Aviso de Privacidad</div>
+      <div class="enviar">Enviar solicitud</div>
+    </div>
+  </div>
+  <div class="whatsapp" style="bottom:40px;"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.1-1.2-.2-.2-.4-.3z"/></svg></div>
+  <div class="nota" style="bottom:50px; right:120px;">Botón de WhatsApp fijo en toda la página.</div>
+</section>
+
+<footer>
+  <div class="contenedor">
+    <div class="pie-grid">
+      <div><div class="logo-blanco" style="display:inline-flex"><img src="../../marca/logo-gal-publicidad-urbana.png" alt="GAL"></div><div class="frase">Al alcance de ti</div></div>
+      <ul><li>Nosotros</li><li>Clientes</li><li>Servicios</li><li>Proceso</li></ul>
+      <ul><li>Preguntas</li><li>Cotización</li><li>Aviso de Privacidad</li></ul>
+      <ul><li>galpublicidad@gmail.com</li><li>Instagram (pendiente)</li><li>LinkedIn (pendiente)</li></ul>
+    </div>
+    <div class="legal"><span>© 2026 GAL Publicidad. Todos los derechos reservados.</span><span>Razón social (pendiente)</span></div>
+  </div>
+</footer>
+
+</body>
+</html>

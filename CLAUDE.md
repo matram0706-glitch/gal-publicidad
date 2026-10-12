@@ -17,6 +17,7 @@ Página web e Instagram para **GAL Publicidad** (México): rotulan vehículos de
 - `TEXTOS.md` — textos de cada sección de la página (Fase 1), con lo que falta pedir a GAL
 - `RECURSOS.md` — colores de marca, skills instaladas, sitios de inspiración
 - `marca/` — logo, camioneta rotulada, video del logo
+- `entregas/` — PDF e imágenes para enviar a GAL (el código fuente está en `entregas/fuente/`)
 
 ## Sobre el usuario
 
