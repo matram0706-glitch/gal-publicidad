@@ -1,12 +1,12 @@
 # GAL Publicidad
 
-Página web e Instagram para **GAL Publicidad** (México): rotulan vehículos de transporte con la publicidad de marcas: diseñan, imprimen, instalan el vinil y lo monitorean. **Las rutas las proporciona el cliente** (GAL no ofrece rutas). También hacen impresión digital, recorte de vinil y lonas.
+Página web e Instagram para **GAL Publicidad** (México): rotulan vehículos de transporte con la publicidad de marcas (combis, camionetas, taxis, camiones y transporte privado): diseñan, imprimen, instalan el vinil y lo monitorean. **Los vehículos y las rutas los proporciona la empresa cliente** (GAL no ofrece unidades ni rutas). También hacen impresión digital (viniles y lonas, su fuerte) y recorte de vinil.
 
 ## Datos de la empresa
 
 - 9 años de experiencia · 300–500 vehículos rotulados al año · campañas de hasta ~100 unidades · se pueden usar los logos de clientes
 - Fotos reales de campañas en `marca/fotos/` (tapar placas antes de publicar)
-- Tiempos: 3 días (impresión, recorte de vinil, lonas) · 1 semana (campañas con diseño)
+- Tiempos: dependen de la complejidad del proyecto; se indican en la cotización (no publicar plazos fijos)
 - Correo: galpublicidad@gmail.com
 - Clientes: Kolors, Price Shoes, Botanas El Sol, Universidad Humanitas
 - Frases: "Publicidad urbana" · "Al alcance de ti"

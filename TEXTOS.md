@@ -1,6 +1,6 @@
 # Textos de la página: GAL Publicidad
 
-> **Fase 1: Textos y estructura.** Versión 3: sin la sección de rutas (las proporciona el cliente), servicios actualizados y 300–500 vehículos al año.
+> **Fase 1: Textos y estructura.** Versión 4: el cliente proporciona vehículos y rutas, impresión digital = viniles y lonas, tiempos según complejidad, todos los tipos de vehículo.
 > Todo sale de `ESTRATEGIA.md` y de los datos que confirmó GAL. No hay cifras inventadas.
 >
 > **Cómo leer este documento:**
@@ -13,7 +13,7 @@
 ## Datos para Google (no se ven en la página, pero aparecen en los resultados de búsqueda)
 
 - **Título de la pestaña:** GAL Publicidad | Publicidad en camionetas, camiones y transporte privado
-- **Descripción:** Pon tu marca en camionetas, camiones y transporte privado. 9 años de experiencia, 300 a 500 vehículos rotulados al año. Cotiza tu campaña.
+- **Descripción:** Pon tu marca en combis, camionetas, taxis, camiones y transporte privado. 9 años de experiencia, 300 a 500 vehículos rotulados al año. Cotiza tu campaña.
 
 ---
 
@@ -67,7 +67,7 @@ Logo GAL · Nosotros · Clientes · Servicios · Proceso · Preguntas · **[Soli
 **Texto:**
 GAL Publicidad es una empresa mexicana especializada en publicidad en vehículos de transporte. Desde hace 9 años desarrollamos campañas para marcas nacionales y regionales, y cada año rotulamos entre 300 y 500 unidades.
 
-Ofrecemos un servicio integral: diseñamos, imprimimos e instalamos los anuncios, y supervisamos su estado durante toda la campaña. Complementamos nuestro servicio con impresión digital, recorte de vinil y lonas.
+Rotulamos las unidades de nuestros clientes: combis, camionetas, taxis, camiones y unidades de transporte privado. Ofrecemos un servicio integral: diseñamos, imprimimos e instalamos los anuncios, y supervisamos su estado durante toda la campaña. Complementamos nuestro servicio con impresión digital de viniles y lonas, y recorte de vinil.
 
 ### Misión `[APROBAR GAL]`
 Llevar la marca de nuestros clientes a las calles mediante campañas de publicidad en transporte que gestionamos de principio a fin, con calidad, puntualidad y seguimiento constante.
@@ -85,7 +85,7 @@ Ser la empresa de referencia en publicidad en transporte en México, reconocida 
 ### Nuestros compromisos con cada cliente
 - Un solo punto de contacto durante toda la campaña.
 - Supervisión constante de las unidades y reemplazo del vinil dañado.
-- Campañas listas en 1 semana; impresión y lonas en 3 días.
+- Tiempos de entrega definidos desde la cotización, según la complejidad del proyecto.
 - Facturación `[PENDIENTE: confirmar que dan factura]`
 - Reporte de campaña `[PENDIENTE: ¿entregan fotos o reporte al cliente?]`
 
@@ -146,12 +146,13 @@ Ser la empresa de referencia en publicidad en transporte en México, reconocida 
 
 **Titular:** Nuestros servicios
 
-| Servicio | Texto | Tiempo |
-|---|---|---|
-| **Campañas en transporte** *(principal, tarjeta más grande)* | Rotulación de vehículos de transporte con la imagen de su marca. Incluye diseño, impresión, instalación y mantenimiento. Recomendamos campañas de más de 3 meses: mayor presencia y mejor costo. | 1 semana |
-| **Impresión digital** | Impresión en gran formato para publicidad, puntos de venta y eventos. `[PENDIENTE: confirmar qué piezas imprimen]` | 3 días `[CONFIRMAR]` |
-| **Recorte de vinil** | Letras, logotipos y gráficos recortados en vinil para vehículos, aparadores y señalización. | 3 días |
-| **Lonas** | Para fachadas, eventos y puntos de venta. | 3 días |
+| Servicio | Texto |
+|---|---|
+| **Campañas en transporte** *(principal, tarjeta más grande)* | Rotulamos las unidades de su empresa con la imagen de su marca: combis, camionetas, taxis, camiones y unidades de transporte privado. Incluye diseño, impresión, instalación y mantenimiento. Recomendamos campañas de más de 3 meses: mayor presencia y mejor costo. |
+| **Impresión digital** | Impresión de viniles y lonas en gran formato para vehículos, fachadas, eventos y puntos de venta. |
+| **Recorte de vinil** | Letras, logotipos y gráficos recortados en vinil para vehículos, aparadores y señalización. |
+
+**Nota debajo de la tabla:** El tiempo de entrega depende de la complejidad de cada proyecto y se indica en su cotización.
 
 **Botón en cada tarjeta:** Cotizar este servicio *(lleva al formulario con el servicio ya elegido)*
 
@@ -163,13 +164,13 @@ Ser la empresa de referencia en publicidad en transporte en México, reconocida 
 
 **Titular:** Un proceso completo, con un solo proveedor
 
-1. **Solicitud.** Nos comparte su proyecto: unidades, rutas y fecha de inicio.
+1. **Solicitud.** Nos comparte su proyecto: tipo y número de unidades, y fecha de inicio.
 2. **Diseño.** Adaptamos su anuncio a cada tipo de unidad, o trabajamos con su diseño.
 3. **Impresión.** Imprimimos el vinil con materiales para exterior.
 4. **Instalación.** Rotulamos las unidades y la campaña sale a la calle.
 5. **Supervisión y mantenimiento.** Revisamos los anuncios constantemente y reemplazamos el vinil que se dañe.
 
-**Nota debajo:** Tiempo de entrega: **1 semana**, con diseño incluido.
+**Nota debajo:** El tiempo de entrega depende de la complejidad del proyecto y se lo indicamos desde la cotización.
 
 ---
 
@@ -179,8 +180,11 @@ Ser la empresa de referencia en publicidad en transporte en México, reconocida 
 
 **Titular:** Preguntas frecuentes
 
+**¿Ustedes proporcionan los vehículos?**
+No. Rotulamos las unidades de su empresa: combis, camionetas, taxis, camiones y unidades de transporte privado. Usted define los vehículos y sus rutas; nosotros nos encargamos de la publicidad.
+
 **¿Cuánto tiempo tarda en iniciar una campaña?**
-Alrededor de 1 semana, incluyendo el diseño. Impresión, recorte de vinil y lonas se entregan en 3 días.
+Depende de la complejidad del proyecto: número de unidades, tipo de vehículo y diseño. Le indicamos el tiempo de entrega desde la cotización.
 
 **¿Cuántas unidades puedo rotular?**
 Desde pocas unidades hasta alrededor de 100 por campaña. `[PENDIENTE: ¿hay un mínimo de unidades?]`
@@ -195,7 +199,7 @@ Supervisamos las unidades de forma constante. Si el vinil se daña, lo reemplaza
 Podemos diseñar su anuncio o trabajar con el diseño que usted ya tenga. El costo del diseño se indica por separado en la cotización.
 
 **¿Cuál es el costo?**
-Depende del número de unidades, el tamaño del rotulado y la duración. Le enviamos una cotización con medidas, diseño y precio final. `[PENDIENTE: ¿en cuánto tiempo responden?]`
+Depende del número y tipo de unidades, el tamaño del rotulado y la duración. Le enviamos una cotización con medidas, diseño y precio final. `[PENDIENTE: ¿en cuánto tiempo responden?]`
 
 **¿Emiten factura?** `[PENDIENTE: confirmar]`
 
@@ -216,9 +220,9 @@ Depende del número de unidades, el tamaño del rotulado y la duración. Le envi
 | Empresa | Texto | Sí |
 | Cargo | Texto | No |
 | Correo o teléfono | Texto | Sí |
-| Servicio de interés | Opciones: Campaña en transporte · Impresión digital · Recorte de vinil · Lonas | Sí |
+| Servicio de interés | Opciones: Campaña en transporte · Impresión digital (viniles y lonas) · Recorte de vinil | Sí |
+| Tipo de vehículo | Opciones: Combi · Camioneta · Taxi · Camión · Transporte privado · Otro | No |
 | Número de unidades | Número | No |
-| Rutas de sus unidades | Texto | No |
 | ¿Requiere diseño? | Sí / No / Ya cuento con diseño | No |
 | Fecha de inicio aproximada | Fecha | No |
 
@@ -272,6 +276,5 @@ Obligatorio por ley porque el formulario pide datos personales. Se redacta en la
 6. ¿Entregan **fotos o reporte** al cliente durante la campaña?
 7. ¿Emiten **factura**? ¿Hay un **mínimo de unidades**?
 8. ¿En cuánto tiempo **responden una cotización**?
-9. **Impresión digital:** qué piezas imprimen y en cuánto tiempo
-10. Una **frase de un cliente** (testimonio)
-11. **Instagram**, **LinkedIn** y **razón social** (para el pie de página y el Aviso de Privacidad)
+9. Una **frase de un cliente** (testimonio)
+10. **Instagram**, **LinkedIn** y **razón social** (para el pie de página y el Aviso de Privacidad)

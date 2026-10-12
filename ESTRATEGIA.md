@@ -7,7 +7,7 @@
 
 ## 1. Resumen en 5 líneas
 
-1. GAL **rotula vehículos de transporte con la publicidad de las marcas**. Se encarga del diseño, la impresión, la instalación y el mantenimiento. **Las rutas las proporciona el cliente.** También hace impresión digital, recorte de vinil y lonas.
+1. GAL **rotula vehículos de transporte con la publicidad de las marcas**. Se encarga del diseño, la impresión, la instalación y el mantenimiento. **Los vehículos y las rutas los proporciona la empresa cliente.** También hace impresión digital (viniles y lonas) y recorte de vinil.
 2. Tiene **9 años** y ha trabajado con **Kolors, Price Shoes, Botanas El Sol y Universidad Humanitas**. Esa es su mejor carta de venta.
 3. La página no es un folleto. Su trabajo es **convertir visitas en solicitudes de cotización**.
 4. Instagram atrae y demuestra (camionetas en la calle). La página convence y captura el contacto.
@@ -17,18 +17,18 @@
 
 ## 2. Cómo funciona GAL (confirmado por GAL, octubre 2026)
 
-**GAL rotula vehículos de transporte con la publicidad de las marcas.** **Actualización (oct. 2026): las rutas las proporciona el cliente; GAL no ofrece ni negocia rutas.**
+**GAL rotula vehículos de transporte con la publicidad de las marcas.** **Actualización (oct. 2026): los vehículos y las rutas los proporciona la empresa cliente; GAL no ofrece unidades ni rutas.** Tipos de vehículo: combis, camionetas, taxis, camiones y transporte privado.
 
 **Ejemplo real:** Price Shoes pide rotular sus unidades → GAL diseña, imprime e instala el vinil → **monitorea constantemente** que el anuncio siga en buen estado y, si se daña, lo cambia.
 
 | Dato | Detalle |
 |---|---|
 | Servicio principal | Campañas de publicidad en vehículos de transporte (rutas del cliente) |
-| Otros servicios | Impresión digital, recorte de vinil, lonas |
+| Otros servicios | Impresión digital (viniles y lonas, su fuerte), recorte de vinil |
 | Volumen | **300 a 500 vehículos rotulados al año** · campañas de hasta ~100 unidades por cliente |
 | Duración recomendada | **Más de 3 meses**: más volumen y menor costo |
 | Seguimiento | Monitoreo constante; se reemplaza el vinil si se daña |
-| Tiempo de anticipación | **3 días** para impresión, recorte de vinil y lonas · **1 semana** para campañas (incluye diseño) |
+| Tiempo de entrega | Depende de la complejidad; se indica en la cotización |
 | Logos de clientes | GAL autoriza usar los logos de las empresas |
 
 **Cómo consiguen clientes hoy:**
@@ -84,7 +84,7 @@ Circulan cifras como "30,000 a 70,000 impresiones diarias por vehículo" y "97% 
 | "¿Y si el anuncio se daña?" | Monitoreo constante y reemplazo del vinil |
 | "¿Pueden hacer una campaña grande?" | 300–500 vehículos al año; campañas de hasta ~100 unidades |
 | "¿Cuánto cuesta?" | "Desde $X" o paquetes. Si no se publica precio: "Cotización en 24 horas" |
-| "¿Cuánto tardan?" | 3 días en lonas y vinil · 1 semana en campañas con diseño |
+| "¿Cuánto tardan?" | Depende de la complejidad; el plazo va en la cotización |
 | "¿Son serios?" | 9 años, logos de clientes, correo y teléfono visibles, factura |
 | "¿Es complicado?" | Proceso en 4 pasos, ellos se encargan de todo |
 
@@ -114,7 +114,7 @@ Cada sección tiene **un solo trabajo**. Si no lo cumple, se quita.
 | 3 | **Por qué publicidad móvil** | Explicar la ventaja contra otros medios | Comparativa simple: espectacular fijo vs camioneta que se mueve |
 | 4 | **Casos de éxito** | Probar que funciona | Fotos reales de cada campaña: marca, ciudad, duración, resultado |
 | 6 | **Cómo funciona** | Quitar el miedo a lo complicado | 5 pasos: solicitud → diseño → impresión → instalación → supervisión y mantenimiento |
-| 7 | **Productos** | Ayudar a decidir | Campañas en transporte (principal), impresión digital, recorte de vinil, lonas |
+| 7 | **Productos** | Ayudar a decidir | Campañas en transporte (principal), impresión digital (viniles y lonas), recorte de vinil |
 | 8 | **Preguntas frecuentes** | Resolver objeciones sin llamada | Acordeón: permisos, tiempos, facturación, diseño incluido |
 | 9 | **Cotiza tu campaña** | Capturar el contacto | Formulario + WhatsApp + correo |
 
@@ -214,7 +214,8 @@ Archivos de marca en `marca/`. Colores y recursos en `RECURSOS.md`.
 Sin esto la página se queda con textos inventados. **Es lo más importante.**
 
 - [x] **Modelo de negocio:** rotulan vehículos; las rutas las proporciona el cliente
-- [x] Tiempos de entrega: 3 días (impresión, recorte de vinil, lonas) / 1 semana (campañas)
+- [x] Tiempos de entrega: según complejidad, se indican en la cotización
+- [x] Vehículos: los proporciona la empresa cliente (combis, camionetas, taxis, camiones, transporte privado)
 - [x] 300–500 vehículos rotulados **al año**
 - [x] Campañas incluyen monitoreo y reemplazo del vinil
 - [x] Rutas: las proporciona el cliente
