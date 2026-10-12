@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GAL Publicidad | Publicidad en camionetas, camiones y transporte privado</title>
+<meta name="description" content="Pon tu marca en combis, camionetas, taxis, camiones y transporte privado. 9 años de experiencia, 300 a 500 vehículos rotulados al año. Cotiza tu campaña.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --azul: #00339B;
+    --lienzo: #013599;       /* azul exacto del fondo de la camioneta: la foto se funde con la sección */
+    --tinta: #071B4A;
+    --papel: #F3F5F9;
+    --blanco: #FFFFFF;
+    --texto: #16203A;
+    --suave: #5B6478;
+    --linea: #D9DEE8;
+    --amarillo: #FFF301;
+    --magenta: #FF01FF;
+    --cian: #01FFFF;
+    --negro: #333333;
+    --inclinado: -12deg;     /* inclinación de las letras del logo */
+    --ancho: min(1180px, calc(100vw - 48px));
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  html, body { overflow-x: clip; }
+  body { margin: 0; font-family: "Archivo", "Inter", system-ui, sans-serif; font-stretch: 100%; color: var(--texto); background: var(--blanco); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--magenta); outline-offset: 3px; }
+  .ancho { width: var(--ancho); margin: 0 auto; }
+  .titular { font-stretch: 122%; font-weight: 850; font-style: italic; letter-spacing: -0.02em; line-height: .98; margin: 0; }
+  .h2 { font-size: clamp(40px, 6vw, 82px); }
+  .entrada { font-size: clamp(18px, 1.6vw, 21px); line-height: 1.55; max-width: 60ch; }
+  .etiqueta { font-size: 15px; font-weight: 600; font-stretch: 112%; color: var(--azul); margin: 0 0 18px; display: flex; align-items: center; gap: 10px; }
+  .etiqueta::before { content: ""; width: 26px; height: 4px; background: linear-gradient(90deg, var(--amarillo) 25%, var(--magenta) 25% 50%, var(--cian) 50% 75%, var(--negro) 75%); transform: skewX(var(--inclinado)); }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  /* Botones: paralelogramo, como el trazo del logo */
+  .boton { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 16px 30px; font: inherit; font-weight: 750; font-stretch: 110%; font-size: 16px; text-decoration: none; border: 0; cursor: pointer; position: relative; isolation: isolate; color: var(--tinta); }
+  .boton::before { content: ""; position: absolute; inset: 0; background: var(--amarillo); transform: skewX(var(--inclinado)); z-index: -1; transition: transform .25s ease, background .25s ease; }
+  .boton:hover::before { transform: skewX(var(--inclinado)) scale(1.04); }
+  .boton.contorno { color: var(--blanco); }
+  .boton.contorno::before { background: transparent; box-shadow: inset 0 0 0 2px rgba(255,255,255,.55); }
+  .boton.contorno:hover::before { background: rgba(255,255,255,.08); }
+  .boton.azul { color: var(--blanco); }
+  .boton.azul::before { background: var(--azul); }
+
+  /* Aviso de prototipo */
+  .aviso-proto { position: fixed; right: 16px; top: 96px; z-index: 60; background: var(--blanco); color: var(--tinta); font-size: 13px; font-weight: 600; padding: 8px 10px 8px 14px; display: flex; gap: 10px; align-items: center; border-left: 4px solid var(--magenta); box-shadow: 0 6px 24px rgba(7,27,74,.18); max-width: 260px; line-height: 1.35; }
+
+  /* Menú */
+  .menu { position: fixed; top: 0; left: 0; right: 0; z-index: 50; transition: background .3s ease, box-shadow .3s ease; }
+  .menu .ancho { display: flex; align-items: center; justify-content: space-between; height: 84px; }
+  .menu.solido { background: rgba(7,27,74,.94); backdrop-filter: blur(10px); box-shadow: 0 1px 0 rgba(255,255,255,.08); }
+  .logo { display: block; background: var(--blanco); padding: 8px 18px 8px 14px; clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%); }
+  .logo img { height: 44px; width: auto; }
+  .menu nav { display: flex; gap: 30px; align-items: center; color: var(--blanco); font-size: 15px; font-weight: 550; }
+  .menu nav a:not(.boton) { text-decoration: none; opacity: .85; }
+  .menu nav a:not(.boton):hover { opacity: 1; text-decoration: underline; text-underline-offset: 6px; }
+  .menu .boton { padding: 11px 22px; font-size: 14px; }
+  .menu-btn { display: none; background: none; border: 0; color: var(--blanco); font: inherit; font-weight: 700; padding: 10px; cursor: pointer; }
+
+  /* 1. Inicio */
+  .inicio { position: relative; min-height: 100svh; background: var(--tinta); color: var(--blanco); overflow: hidden; display: flex; flex-direction: column; }
+  .inicio .marco { flex: 1; display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 40px; padding-top: 110px; position: relative; z-index: 2; }
+  .inicio .etiqueta { color: var(--cian); }
+  .inicio h1 { font-size: clamp(48px, 6vw, 94px); }
+  .inicio h1 .linea { display: block; overflow: hidden; padding: 0 .08em .06em 0; }
+  .inicio h1 .linea span { display: block; }
+  .inicio .acciones { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 44px; }
+  .ventana { position: relative; aspect-ratio: 4 / 3.2; clip-path: polygon(16% 0, 100% 0, 84% 100%, 0 100%); overflow: hidden; }
+  .ventana img { position: absolute; inset: 0; width: 125%; max-width: none; height: 100%; object-fit: cover; object-position: 30% 55%; }
+  .estela { position: absolute; left: 0; width: 100%; bottom: 9%; height: 22%; z-index: 1; pointer-events: none; }
+  .estela path { fill: none; stroke-width: 15; stroke-linecap: butt; }
+  .ficha { position: relative; z-index: 3; border-top: 1px solid rgba(255,255,255,.14); background: var(--tinta); }
+  .ficha .ancho { display: grid; grid-template-columns: auto repeat(3, 1fr); align-items: center; gap: 28px; padding: 22px 0 26px; }
+  .registro { width: 34px; height: 34px; }
+  .dato b { display: block; font-size: clamp(26px, 3vw, 40px); font-weight: 850; font-style: italic; font-stretch: 120%; line-height: 1.05; }
+  .dato span { font-size: 14px; opacity: .72; }
+
+  /* 2. Clientes */
+  .clientes { padding: 54px 0; border-bottom: 1px solid var(--linea); }
+  .clientes .ancho { display: grid; grid-template-columns: 220px 1fr; align-items: center; gap: 30px; }
+  .clientes p { margin: 0; font-size: 15px; color: var(--suave); line-height: 1.4; }
+  .marcas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .marcas li { list-style: none; height: 74px; display: grid; place-items: center; font-weight: 800; font-stretch: 112%; font-size: 19px; color: #7B8497; background: var(--papel); }
+  .marcas { padding: 0; margin: 0; }
+
+  /* 3. Rotulación (momento principal) */
+  .rotulacion { background: var(--lienzo); color: var(--blanco); position: relative; }
+  .escena { height: 100svh; display: grid; grid-template-columns: 0.85fr 1.4fr; align-items: center; gap: 30px; }
+  .escena h2 { font-size: clamp(36px, 4.4vw, 62px); margin-bottom: 30px; }
+  .pasos { list-style: none; margin: 0; padding: 0; counter-reset: paso; }
+  .pasos li { counter-increment: paso; display: grid; grid-template-columns: 46px 1fr; gap: 0 14px; padding: 12px 0; opacity: .38; transition: opacity .35s ease; border-top: 1px solid rgba(255,255,255,.14); }
+  .pasos li:last-child { border-bottom: 1px solid rgba(255,255,255,.14); }
+  .pasos li::before { content: counter(paso); grid-row: span 2; font-size: 30px; font-weight: 850; font-style: italic; font-stretch: 120%; line-height: 1; color: var(--amarillo); }
+  .pasos b { font-size: 19px; font-stretch: 110%; }
+  .pasos span { font-size: 15px; opacity: .85; line-height: 1.45; display: block; max-height: 0; overflow: hidden; transition: max-height .4s ease; }
+  .pasos li.activo { opacity: 1; }
+  .pasos li.activo span { max-height: 60px; }
+  .camioneta { position: relative; aspect-ratio: 16 / 9; }
+  .camioneta img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .camioneta .rotulada { clip-path: inset(0 0 0 0); }
+  .rasqueta { position: absolute; top: 14%; bottom: 14%; width: 6px; left: 100%; background: var(--amarillo); box-shadow: 0 0 24px rgba(255,243,1,.6); opacity: 0; transform: skewX(var(--inclinado)); }
+  .medidas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; }
+  .medidas line, .medidas path { stroke: var(--cian); stroke-width: 2; fill: none; }
+  .medidas .discontinua { stroke-dasharray: 8 7; stroke: rgba(255,255,255,.7); }
+  .medidas text { fill: var(--cian); font: 600 15px "Archivo", sans-serif; font-stretch: 110%; }
+  .barra-cmyk { position: absolute; left: 14%; right: 14%; bottom: 7%; height: 10px; display: flex; transform-origin: left; transform: scaleX(0); }
+  .barra-cmyk i { flex: 1; }
+  .sello { position: absolute; right: 8%; top: 10%; background: var(--blanco); color: var(--tinta); font-weight: 800; font-stretch: 112%; font-size: 15px; padding: 10px 18px 10px 14px; display: flex; gap: 10px; align-items: center; opacity: 0; clip-path: polygon(6% 0, 100% 0, 94% 100%, 0 100%); }
+  .sello svg { width: 20px; height: 20px; }
+
+  /* 4. Nosotros */
+  .nosotros { padding: 140px 0 120px; }
+  .nosotros .reparto { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .nosotros h2 { color: var(--azul); margin-bottom: 34px; }
+  .nosotros .texto p { margin: 0 0 18px; max-width: 58ch; color: #34405A; }
+  .mv { display: grid; gap: 34px; padding-top: 12px; }
+  .mv div { border-left: 4px solid var(--azul); padding: 4px 0 4px 26px; }
+  .mv div + div { border-left-color: var(--magenta); }
+  .mv h3 { margin: 0 0 8px; font-size: 26px; font-style: italic; font-weight: 850; font-stretch: 118%; color: var(--azul); }
+  .mv p { margin: 0; color: #34405A; }
+  .valores { margin: 90px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid var(--linea); }
+  .valores li { padding: 26px 22px 0 0; }
+  .valores li::before { content: ""; display: block; width: 34px; height: 10px; margin-bottom: 18px; transform: skewX(var(--inclinado)); background: var(--c); }
+  .valores b { display: block; font-size: 19px; font-stretch: 110%; color: var(--tinta); margin-bottom: 6px; }
+  .valores span { font-size: 15px; color: var(--suave); line-height: 1.5; display: block; }
+
+  /* 5. Comparativa */
+  .comparar { background: var(--papel); padding: 120px 0; }
+  .comparar h2 { color: var(--azul); max-width: 18ch; }
+  .comparar .cabeza { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: end; margin-bottom: 60px; }
+  .comparar .cabeza p { margin: 0; color: #34405A; }
+  .mapas { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .mapa { background: var(--blanco); padding: 28px; }
+  .mapa h3 { margin: 0 0 4px; font-size: 24px; font-style: italic; font-weight: 850; font-stretch: 118%; color: var(--tinta); }
+  .mapa p { margin: 0 0 20px; font-size: 15px; color: var(--suave); }
+  .mapa svg { width: 100%; height: auto; display: block; }
+  .mapa .cuadra { fill: #E7EBF2; transition: fill .5s ease; }
+  .mapa .cuadra.vista { fill: #BFD0F5; }
+  .mapa.movil .cuadra.vista { fill: var(--azul); }
+
+  /* 6. Casos */
+  .casos { padding: 130px 0 120px; }
+  .casos h2 { color: var(--azul); margin-bottom: 60px; }
+  .galeria { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
+  .caso { margin: 0; position: relative; }
+  .caso .foto { overflow: hidden; background: var(--papel); }
+  .caso img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s ease; }
+  .caso:hover img { transform: scale(1.04); }
+  .caso figcaption { padding: 16px 0 0; display: grid; gap: 2px; }
+  .caso figcaption b { font-size: 22px; font-style: italic; font-weight: 850; font-stretch: 118%; color: var(--tinta); }
+  .caso figcaption span { font-size: 15px; color: var(--suave); }
+  .c1 { grid-column: 1 / 8; } .c1 .foto { aspect-ratio: 16 / 10; }
+  .c2 { grid-column: 8 / 13; } .c2 .foto { aspect-ratio: 4 / 4.65; }
+  .c3 { grid-column: 1 / 5; margin-top: 30px; } .c3 .foto { aspect-ratio: 3 / 4; }
+  .c4 { grid-column: 5 / 13; margin-top: 30px; } .c4 .foto { aspect-ratio: 16 / 9.4; }
+  .pendientes { grid-column: 1 / -1; margin-top: 30px; padding: 26px 30px; border: 2px dashed var(--linea); color: var(--suave); font-size: 15px; }
+
+  /* 7. Servicios */
+  .servicios { background: var(--tinta); color: var(--blanco); padding: 130px 0; }
+  .servicios h2 { margin-bottom: 60px; }
+  .lista-serv { list-style: none; margin: 0; padding: 0; }
+  .serv { display: grid; grid-template-columns: 1.1fr 1.3fr auto; gap: 40px; align-items: center; padding: 38px 0; border-top: 1px solid rgba(255,255,255,.16); }
+  .serv:last-child { border-bottom: 1px solid rgba(255,255,255,.16); }
+  .serv h3 { margin: 0; font-size: clamp(30px, 3.6vw, 50px); font-style: italic; font-weight: 850; font-stretch: 120%; line-height: 1; }
+  .serv p { margin: 0; color: rgba(255,255,255,.78); }
+  .serv .principal { display: inline-block; font-size: 14px; font-weight: 700; color: var(--tinta); background: var(--amarillo); padding: 3px 12px; margin-bottom: 14px; transform: skewX(var(--inclinado)); }
+  .serv .principal span { display: inline-block; transform: skewX(12deg); }
+  .serv a.cotizar { color: var(--amarillo); font-weight: 700; text-underline-offset: 5px; white-space: nowrap; }
+  .serv.destacado h3 { font-size: clamp(36px, 4.6vw, 66px); }
+  .nota-tiempo { margin: 30px 0 0; color: rgba(255,255,255,.65); font-size: 15px; }
+
+  /* 8. Preguntas */
+  .preguntas { padding: 130px 0; }
+  .preguntas .reparto { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 80px; }
+  .preguntas h2 { color: var(--azul); position: sticky; top: 120px; }
+  details { border-top: 1px solid var(--linea); }
+  details:last-child { border-bottom: 1px solid var(--linea); }
+  summary { list-style: none; cursor: pointer; padding: 24px 0; display: flex; justify-content: space-between; gap: 20px; font-size: 19px; font-weight: 700; font-stretch: 106%; color: var(--tinta); }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-size: 28px; line-height: 1; color: var(--azul); transition: transform .25s ease; }
+  details[open] summary::after { transform: rotate(45deg); }
+  details p { margin: 0 0 24px; max-width: 62ch; color: #34405A; }
+  .pend { background: #FFF9B0; padding: 1px 6px; font-size: 14px; color: #5A5200; }
+
+  /* 9. Cotización */
+  .cotiza { background: var(--azul); color: var(--blanco); padding: 130px 0; position: relative; overflow: hidden; }
+  .cotiza .reparto { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 70px; position: relative; z-index: 2; }
+  .cotiza .etiqueta { color: var(--amarillo); }
+  .cotiza h2 { margin-bottom: 26px; }
+  .cotiza .entrada { opacity: .9; }
+  .contacto { margin: 40px 0 0; padding: 0; list-style: none; display: grid; gap: 14px; }
+  .contacto li { display: grid; grid-template-columns: 110px 1fr; gap: 10px; font-size: 16px; }
+  .contacto li span:first-child { opacity: .65; }
+  form { background: var(--blanco); color: var(--texto); padding: 38px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px 16px; }
+  .campo { display: grid; gap: 6px; }
+  .campo.doble { grid-column: span 2; }
+  label { font-size: 14px; font-weight: 650; color: #34405A; }
+  input, select { font: inherit; font-size: 16px; padding: 13px 14px; border: 1.5px solid #CCD3E0; background: var(--blanco); color: var(--texto); border-radius: 0; width: 100%; }
+  input:focus, select:focus { outline: none; border-color: var(--azul); box-shadow: 0 0 0 3px rgba(0,51,155,.15); }
+  .acepto { grid-column: span 2; display: flex; gap: 10px; align-items: center; font-size: 14px; color: #34405A; }
+  .acepto input { width: 18px; height: 18px; padding: 0; }
+  form .boton { grid-column: span 2; padding: 18px; font-size: 17px; }
+  .gracias { grid-column: span 2; display: none; background: #E6F7EC; color: #145A2E; padding: 14px 16px; font-weight: 600; }
+  .gracias.visible { display: block; }
+  .cotiza .estela-fondo { position: absolute; right: -10%; bottom: -8%; width: 70%; opacity: .25; z-index: 1; }
+
+  /* Pie */
+  footer { background: var(--tinta); color: rgba(255,255,255,.75); padding: 90px 0 40px; font-size: 15px; }
+  .pie-arriba { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; align-items: start; }
+  .frase { font-size: clamp(44px, 6vw, 88px); color: var(--blanco); margin-top: 28px; }
+  footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  footer a { text-decoration: none; }
+  footer a:hover { color: var(--blanco); text-decoration: underline; }
+  .legal { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-top: 70px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.12); font-size: 13px; opacity: .7; }
+
+  .whatsapp { position: fixed; right: 20px; bottom: 20px; z-index: 60; width: 62px; height: 62px; border-radius: 50%; background: #25D366; display: grid; place-items: center; box-shadow: 0 10px 26px rgba(0,0,0,.25); }
+  .whatsapp svg { width: 32px; height: 32px; }
+
+  /* Celular */
+  @media (max-width: 900px) {
+    :root { --ancho: calc(100vw - 32px); }
+    .menu nav { display: none; }
+    .menu nav.abierto { display: flex; position: absolute; top: 84px; left: 0; right: 0; flex-direction: column; align-items: flex-start; background: var(--tinta); padding: 20px 16px 28px; gap: 18px; }
+    .menu-btn { display: block; }
+    .inicio .marco { grid-template-columns: 1fr; padding-top: 120px; gap: 30px; }
+    .ventana { aspect-ratio: 16 / 10; }
+    .ficha .ancho { grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .registro { display: none; }
+    .dato span { font-size: 12px; }
+    .clientes .ancho { grid-template-columns: 1fr; }
+    .marcas { grid-template-columns: repeat(2, 1fr); }
+    .escena { grid-template-columns: 1fr; align-content: center; gap: 20px; }
+    .escena h2 { margin-bottom: 10px; }
+    .pasos li { padding: 8px 0; }
+    .pasos li::before { font-size: 22px; }
+    .pasos b { font-size: 16px; }
+    .nosotros .reparto, .comparar .cabeza, .mapas, .preguntas .reparto, .cotiza .reparto { grid-template-columns: 1fr; gap: 40px; }
+    .valores { grid-template-columns: 1fr 1fr; gap: 0 20px; }
+    .galeria { grid-template-columns: 1fr; }
+    .c1, .c2, .c3, .c4 { grid-column: 1; margin-top: 0; }
+    .serv { grid-template-columns: 1fr; gap: 14px; }
+    .preguntas h2 { position: static; }
+    form { grid-template-columns: 1fr; padding: 24px; }
+    .campo.doble, .acepto, form .boton, .gracias { grid-column: 1; }
+    .pie-arriba { grid-template-columns: 1fr 1fr; }
+    .aviso-proto { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .pasos li { opacity: 1; }
+    .pasos li span { max-height: none; }
+  }
+</style>
+</head>
+<body>
+
+<a class="sr" href="#cotizar">Ir al formulario de cotización</a>
+<div class="aviso-proto" role="note" id="aviso"><span>Prototipo para revisión. Algunos datos están pendientes.</span><button type="button" aria-label="Cerrar aviso" onclick="this.parentNode.remove()" style="border:0;background:var(--papel);font:inherit;font-weight:700;cursor:pointer;padding:4px 9px">×</button></div>
+
+<header class="menu" id="menu">
+  <div class="ancho">
+    <a class="logo" href="#inicio" aria-label="GAL Publicidad, inicio"><img src="img/logo.png" alt="GAL Publicidad Urbana" width="600" height="373"></a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu-nav">Menú</button>
+    <nav id="menu-nav" aria-label="Principal">
+      <a href="#nosotros">Nosotros</a>
+      <a href="#clientes">Clientes</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="boton" href="#cotizar">Solicitar cotización</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- 1. Inicio -->
+<section class="inicio" id="inicio">
+  <svg class="estela" viewBox="0 0 1440 240" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-20 230 C 420 225, 900 150, 1460 18" stroke="#FFF301"/>
+    <path d="M-20 238 C 420 236, 900 176, 1460 58" stroke="#FF01FF"/>
+    <path d="M-20 246 C 420 247, 900 202, 1460 98" stroke="#01FFFF"/>
+    <path d="M-20 254 C 420 258, 900 228, 1460 138" stroke="#333333"/>
+  </svg>
+  <div class="ancho marco">
+    <div>
+      <p class="etiqueta">Publicidad en transporte con 9 años de experiencia</p>
+      <h1 class="titular">
+        <span class="linea"><span>Publicidad</span></span>
+        <span class="linea"><span>que no se</span></span>
+        <span class="linea"><span>queda quieta.</span></span>
+      </h1>
+      <div class="acciones">
+        <a class="boton" href="#cotizar">Solicitar cotización</a>
+        <a class="boton contorno" href="#cotizar" title="Número de WhatsApp pendiente">Contacto por WhatsApp</a>
+      </div>
+    </div>
+    <div class="ventana" aria-hidden="true">
+      <img id="foto-inicio" src="img/priceshoes-combi-lateral.jpg" alt="">
+    </div>
+  </div>
+  <div class="ficha">
+    <div class="ancho">
+      <svg class="registro" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="11" fill="none" stroke="#fff" stroke-width="1.5"/><path d="M20 2v36M2 20h36" stroke="#fff" stroke-width="1.5"/></svg>
+      <div class="dato"><b data-cuenta="9">9 años</b><span>de experiencia</span></div>
+      <div class="dato"><b>300–500</b><span>vehículos rotulados al año</span></div>
+      <div class="dato"><b>Hasta ~100</b><span>unidades por campaña</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Clientes -->
+<section class="clientes" id="clientes" aria-labelledby="t-clientes">
+  <div class="ancho">
+    <p id="t-clientes">Empresas que confían en GAL Publicidad</p>
+    <ul class="marcas">
+      <li>Kolors</li><li>Price Shoes</li><li>Botanas El Sol</li><li>Humanitas</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 3. Rotulación: el proceso sobre una camioneta real -->
+<section class="rotulacion" id="proceso" aria-labelledby="t-proceso">
+  <div class="ancho escena">
+    <div>
+      <p class="etiqueta" style="color:var(--cian)">Proceso de trabajo</p>
+      <h2 class="titular" id="t-proceso">De unidad en blanco a anuncio en la calle</h2>
+      <ol class="pasos">
+        <li class="activo"><b>Solicitud</b><span>Nos comparte su proyecto: tipo y número de unidades, y fecha de inicio.</span></li>
+        <li><b>Diseño</b><span>Adaptamos su anuncio a las medidas de cada unidad, o trabajamos con su diseño.</span></li>
+        <li><b>Impresión</b><span>Imprimimos el vinil con materiales para exterior.</span></li>
+        <li><b>Instalación</b><span>Rotulamos las unidades y la campaña sale a la calle.</span></li>
+        <li><b>Supervisión</b><span>Revisamos los anuncios y reemplazamos el vinil que se dañe.</span></li>
+      </ol>
+    </div>
+    <div class="camioneta" aria-hidden="true">
+      <img class="blanca" src="img/van-blanca.jpg" alt="">
+      <img class="rotulada" src="img/van-rotulada.jpg" alt="">
+      <svg class="medidas" viewBox="0 0 1600 900">
+        <path class="discontinua" d="M245 520 C 260 420 340 340 470 280 L 770 185 L 1330 200 L 1350 610 L 1245 650 L 1160 600 L 760 690 L 600 700 L 250 640 Z"/>
+        <line x1="250" y1="790" x2="1350" y2="790"/>
+        <line x1="250" y1="772" x2="250" y2="808"/><line x1="1350" y1="772" x2="1350" y2="808"/>
+        <text x="800" y="830" text-anchor="middle">Largo de la unidad</text>
+        <line x1="1430" y1="190" x2="1430" y2="660"/>
+        <line x1="1412" y1="190" x2="1448" y2="190"/><line x1="1412" y1="660" x2="1448" y2="660"/>
+        <text x="1450" y="430" transform="rotate(90 1450 430)" text-anchor="middle">Alto</text>
+      </svg>
+      <div class="barra-cmyk"><i style="background:#01FFFF"></i><i style="background:#FF01FF"></i><i style="background:#FFF301"></i><i style="background:#333333"></i></div>
+      <div class="rasqueta"></div>
+      <div class="sello"><svg viewBox="0 0 24 24" fill="none" stroke="#00339B" stroke-width="3"><path d="M4 12.5l5 5L20 6.5"/></svg>Unidad revisada</div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Nosotros -->
+<section class="nosotros" id="nosotros" aria-labelledby="t-nosotros">
+  <div class="ancho">
+    <div class="reparto">
+      <div class="texto">
+        <p class="etiqueta">Nosotros</p>
+        <h2 class="titular h2" id="t-nosotros">Quiénes somos</h2>
+        <p class="entrada">GAL Publicidad es una empresa mexicana especializada en publicidad en vehículos de transporte. Desde hace 9 años desarrollamos campañas para marcas nacionales y regionales, y cada año rotulamos entre 300 y 500 unidades.</p>
+        <p>Rotulamos las unidades de nuestros clientes: combis, camionetas, taxis, camiones y unidades de transporte privado. Diseñamos, imprimimos e instalamos los anuncios, y supervisamos su estado durante toda la campaña. Complementamos nuestro servicio con impresión digital de viniles y lonas, y recorte de vinil.</p>
+      </div>
+      <div class="mv">
+        <div><h3>Misión</h3><p>Llevar la marca de nuestros clientes a las calles mediante campañas de publicidad en transporte que gestionamos de principio a fin, con calidad, puntualidad y seguimiento constante.</p></div>
+        <div><h3>Visión</h3><p>Ser la empresa de referencia en publicidad en transporte en México, reconocida por marcas y agencias por la calidad de sus instalaciones y el cumplimiento de cada campaña.</p></div>
+      </div>
+    </div>
+    <ul class="valores" aria-label="Valores">
+      <li style="--c:var(--azul)"><b>Cumplimiento</b><span>Respetamos los tiempos y acuerdos de cada campaña.</span></li>
+      <li style="--c:var(--amarillo)"><b>Calidad</b><span>Cuidamos cada detalle, del diseño a la instalación del vinil.</span></li>
+      <li style="--c:var(--magenta)"><b>Transparencia</b><span>Cotizaciones claras, con medidas, diseño y precio final.</span></li>
+      <li style="--c:var(--cian)"><b>Compromiso</b><span>Supervisamos los anuncios y los reemplazamos si se dañan.</span></li>
+      <li style="--c:var(--negro)"><b>Servicio integral</b><span>Un solo proveedor responsable de todo el proceso.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 5. Comparativa -->
+<section class="comparar" aria-labelledby="t-comparar">
+  <div class="ancho">
+    <div class="cabeza">
+      <div>
+        <p class="etiqueta">Por qué publicidad en transporte</p>
+        <h2 class="titular h2" id="t-comparar">Mayor cobertura que un anuncio fijo</h2>
+      </div>
+      <p class="entrada">Un espectacular se queda en una esquina. Su marca en una unidad de transporte recorre la ciudad todos los días, a nivel de calle, durante toda la campaña.</p>
+    </div>
+    <div class="mapas">
+      <div class="mapa fijo">
+        <h3>Espectacular fijo</h3>
+        <p>Visible solo en una ubicación.</p>
+        <svg viewBox="0 0 400 260" id="mapa-fijo" aria-hidden="true"></svg>
+      </div>
+      <div class="mapa movil">
+        <h3>Publicidad en transporte</h3>
+        <p>Visible en todo su recorrido, en varias zonas al mismo tiempo.</p>
+        <svg viewBox="0 0 400 260" id="mapa-movil" aria-hidden="true"></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Casos -->
+<section class="casos" aria-labelledby="t-casos">
+  <div class="ancho">
+    <p class="etiqueta">Casos de éxito</p>
+    <h2 class="titular h2" id="t-casos">Campañas realizadas</h2>
+    <div class="galeria">
+      <figure class="caso c1"><div class="foto"><img src="img/priceshoes-combi-lateral.jpg" alt="Combi rotulada con la campaña Hazla Price de Price Shoes" loading="lazy"></div>
+        <figcaption><b>Price Shoes</b><span>Rotulación integral de combis para la campaña de afiliación “Hazla Price”.</span></figcaption></figure>
+      <figure class="caso c2"><div class="foto"><img src="img/priceshoes-taxi-frente.jpg" alt="Taxi con el logotipo de Price Shoes en el cofre" loading="lazy"></div>
+        <figcaption><b>Price Shoes</b><span>Cofre y costados de taxis.</span></figcaption></figure>
+      <figure class="caso c3"><div class="foto"><img src="img/kolors-camioneta-lateral.jpg" alt="Camioneta de pasajeros con la identidad de color de Kolors" loading="lazy" style="object-position:70% 50%"></div>
+        <figcaption><b>Kolors</b><span>Identidad de marca en camionetas de pasajeros.</span></figcaption></figure>
+      <figure class="caso c4"><div class="foto"><img src="img/priceshoes-taxi-lateral.jpg" alt="Taxi rotulado de costado con la campaña de Price Shoes" loading="lazy" style="object-position:50% 62%"></div>
+        <figcaption><b>Price Shoes</b><span>Taxis rotulados de costado completo.</span></figcaption></figure>
+      <p class="pendientes">Botanas El Sol y Universidad Humanitas: <span class="pend">fotos pendientes</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Servicios -->
+<section class="servicios" id="servicios" aria-labelledby="t-servicios">
+  <div class="ancho">
+    <p class="etiqueta" style="color:var(--cian)">Servicios</p>
+    <h2 class="titular h2" id="t-servicios">Nuestros servicios</h2>
+    <ul class="lista-serv">
+      <li class="serv destacado">
+        <div><span class="principal"><span>Servicio principal</span></span><h3>Campañas en transporte</h3></div>
+        <p>Rotulamos las unidades de su empresa con la imagen de su marca: combis, camionetas, taxis, camiones y unidades de transporte privado. Incluye diseño, impresión, instalación y mantenimiento. Recomendamos campañas de más de 3 meses.</p>
+        <a class="cotizar" href="#cotizar" data-servicio="Campaña en transporte">Cotizar este servicio</a>
+      </li>
+      <li class="serv">
+        <h3>Impresión digital</h3>
+        <p>Viniles y lonas en gran formato para vehículos, fachadas, eventos y puntos de venta.</p>
+        <a class="cotizar" href="#cotizar" data-servicio="Impresión digital (viniles y lonas)">Cotizar este servicio</a>
+      </li>
+      <li class="serv">
+        <h3>Recorte de vinil</h3>
+        <p>Letras, logotipos y gráficos recortados en vinil para vehículos, aparadores y señalización.</p>
+        <a class="cotizar" href="#cotizar" data-servicio="Recorte de vinil">Cotizar este servicio</a>
+      </li>
+    </ul>
+    <p class="nota-tiempo">El tiempo de entrega depende de la complejidad de cada proyecto y se indica en su cotización.</p>
+  </div>
+</section>
+
+<!-- 8. Preguntas -->
+<section class="preguntas" id="preguntas" aria-labelledby="t-preguntas">
+  <div class="ancho reparto">
+    <div><p class="etiqueta">Preguntas frecuentes</p><h2 class="titular h2" id="t-preguntas">Resolvemos sus dudas</h2></div>
+    <div>
+      <details open><summary>¿Ustedes proporcionan los vehículos?</summary><p>No. Rotulamos las unidades de su empresa: combis, camionetas, taxis, camiones y unidades de transporte privado. Usted define los vehículos y sus rutas; nosotros nos encargamos de la publicidad.</p></details>
+      <details><summary>¿Cuánto tiempo tarda en iniciar una campaña?</summary><p>Depende de la complejidad del proyecto: número de unidades, tipo de vehículo y diseño. Le indicamos el tiempo de entrega desde la cotización.</p></details>
+      <details><summary>¿Cuántas unidades puedo rotular?</summary><p>Desde pocas unidades hasta alrededor de 100 por campaña. <span class="pend">Mínimo de unidades pendiente</span></p></details>
+      <details><summary>¿Cuál es la duración recomendada?</summary><p>Más de 3 meses: su marca gana presencia y el costo mensual disminuye.</p></details>
+      <details><summary>¿Qué ocurre si un anuncio se daña?</summary><p>Supervisamos las unidades de forma constante. Si el vinil se daña, lo reemplazamos.</p></details>
+      <details><summary>¿El diseño está incluido?</summary><p>Podemos diseñar su anuncio o trabajar con el diseño que usted ya tenga. El costo del diseño se indica por separado en la cotización.</p></details>
+      <details><summary>¿Cuál es el costo?</summary><p>Depende del número y tipo de unidades, el tamaño del rotulado y la duración. Le enviamos una cotización con medidas, diseño y precio final.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 9. Cotización -->
+<section class="cotiza" id="cotizar" aria-labelledby="t-cotizar">
+  <svg class="estela-fondo" viewBox="0 0 800 300" aria-hidden="true">
+    <path d="M0 290 C 260 270, 520 160, 800 20" stroke="#FFF301" stroke-width="22" fill="none"/>
+    <path d="M0 300 C 260 284, 520 190, 800 66" stroke="#FF01FF" stroke-width="22" fill="none"/>
+    <path d="M0 310 C 260 298, 520 220, 800 112" stroke="#01FFFF" stroke-width="22" fill="none"/>
+  </svg>
+  <div class="ancho reparto">
+    <div>
+      <p class="etiqueta">Solicitar cotización</p>
+      <h2 class="titular h2" id="t-cotizar">Solicite su cotización</h2>
+      <p class="entrada">Compártanos los detalles de su proyecto y le enviaremos una propuesta con medidas, diseño y precio final.</p>
+      <ul class="contacto">
+        <li><span>WhatsApp</span><span>Pendiente</span></li>
+        <li><span>Teléfono</span><span>Pendiente</span></li>
+        <li><span>Correo</span><span><a href="mailto:galpublicidad@gmail.com">galpublicidad@gmail.com</a></span></li>
+        <li><span>Dirección</span><span>Pendiente</span></li>
+      </ul>
+    </div>
+    <form name="cotizacion" method="POST" data-netlify="true" id="form-cotiza">
+      <input type="hidden" name="form-name" value="cotizacion">
+      <div class="campo"><label for="f-nombre">Nombre</label><input id="f-nombre" name="nombre" required autocomplete="name"></div>
+      <div class="campo"><label for="f-empresa">Empresa</label><input id="f-empresa" name="empresa" required autocomplete="organization"></div>
+      <div class="campo"><label for="f-cargo">Cargo (opcional)</label><input id="f-cargo" name="cargo" autocomplete="organization-title"></div>
+      <div class="campo"><label for="f-contacto">Correo o teléfono</label><input id="f-contacto" name="contacto" required></div>
+      <div class="campo"><label for="f-servicio">Servicio de interés</label>
+        <select id="f-servicio" name="servicio" required>
+          <option>Campaña en transporte</option>
+          <option>Impresión digital (viniles y lonas)</option>
+          <option>Recorte de vinil</option>
+        </select></div>
+      <div class="campo"><label for="f-vehiculo">Tipo de vehículo (opcional)</label>
+        <select id="f-vehiculo" name="vehiculo">
+          <option value="">Seleccione</option><option>Combi</option><option>Camioneta</option><option>Taxi</option><option>Camión</option><option>Transporte privado</option><option>Otro</option>
+        </select></div>
+      <div class="campo"><label for="f-unidades">Número de unidades (opcional)</label><input id="f-unidades" name="unidades" type="number" min="1" inputmode="numeric"></div>
+      <div class="campo"><label for="f-diseno">¿Requiere diseño? (opcional)</label>
+        <select id="f-diseno" name="diseno"><option value="">Seleccione</option><option>Sí</option><option>No</option><option>Ya cuento con diseño</option></select></div>
+      <div class="campo doble"><label for="f-fecha">Fecha de inicio aproximada (opcional)</label><input id="f-fecha" name="fecha" type="date"></div>
+      <label class="acepto"><input type="checkbox" name="aviso" required> Acepto el Aviso de Privacidad</label>
+      <button class="boton azul" type="submit">Enviar solicitud</button>
+      <p class="gracias" id="gracias" role="status">Gracias. Recibimos su solicitud y nos pondremos en contacto a la brevedad.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="ancho">
+    <div class="pie-arriba">
+      <div>
+        <a class="logo" href="#inicio" style="display:inline-block"><img src="img/logo.png" alt="GAL Publicidad Urbana" width="600" height="373"></a>
+        <p class="titular frase">Al alcance de ti</p>
+      </div>
+      <ul><li><a href="#nosotros">Nosotros</a></li><li><a href="#clientes">Clientes</a></li><li><a href="#servicios">Servicios</a></li><li><a href="#proceso">Proceso</a></li></ul>
+      <ul><li><a href="#preguntas">Preguntas</a></li><li><a href="#cotizar">Cotización</a></li><li><a href="#cotizar">Aviso de Privacidad</a></li></ul>
+      <ul><li><a href="mailto:galpublicidad@gmail.com">galpublicidad@gmail.com</a></li><li>Instagram (pendiente)</li><li>LinkedIn (pendiente)</li></ul>
+    </div>
+    <div class="legal"><span>© 2026 GAL Publicidad. Todos los derechos reservados.</span><span>Razón social pendiente</span></div>
+  </div>
+</footer>
+
+<a class="whatsapp" href="#cotizar" aria-label="WhatsApp (número pendiente)" title="WhatsApp (número pendiente)">
+  <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.1-1.2-.2-.2-.4-.3z"/></svg>
+</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function () {
+  // Menú: fondo sólido al bajar y botón en celular
+  var menu = document.getElementById('menu');
+  var btn = document.getElementById('menu-btn');
+  var nav = document.getElementById('menu-nav');
+  window.addEventListener('scroll', function () { menu.classList.toggle('solido', window.scrollY > 40); }, { passive: true });
+  btn.addEventListener('click', function () {
+    var abierto = nav.classList.toggle('abierto');
+    btn.setAttribute('aria-expanded', abierto);
+  });
+  nav.addEventListener('click', function (e) { if (e.target.tagName === 'A') { nav.classList.remove('abierto'); btn.setAttribute('aria-expanded', false); } });
+
+  // "Cotizar este servicio" elige el servicio en el formulario
+  document.querySelectorAll('[data-servicio]').forEach(function (a) {
+    a.addEventListener('click', function () { document.getElementById('f-servicio').value = a.dataset.servicio; });
+  });
+
+  // Formulario: en el prototipo solo muestra el mensaje; publicado en Netlify se envía de verdad
+  var form = document.getElementById('form-cotiza');
+  form.addEventListener('submit', function (e) {
+    if (!/netlify\.app$/.test(location.hostname)) {
+      e.preventDefault();
+      document.getElementById('gracias').classList.add('visible');
+      form.reset();
+    }
+  });
+
+  // Mapas de la comparativa: cuadras de una ciudad
+  var COLS = 10, ROWS = 6, W = 400, H = 260, cw = W / COLS, rh = H / ROWS, gap = 7;
+  function dibujarMapa(svg) {
+    var ns = 'http://www.w3.org/2000/svg', cuadras = [];
+    for (var r = 0; r < ROWS; r++) for (var c = 0; c < COLS; c++) {
+      var rect = document.createElementNS(ns, 'rect');
+      rect.setAttribute('x', c * cw + gap / 2); rect.setAttribute('y', r * rh + gap / 2);
+      rect.setAttribute('width', cw - gap); rect.setAttribute('height', rh - gap);
+      rect.setAttribute('class', 'cuadra'); svg.appendChild(rect); cuadras.push(rect);
+    }
+    return cuadras;
+  }
+  var fijo = dibujarMapa(document.getElementById('mapa-fijo'));
+  var movil = dibujarMapa(document.getElementById('mapa-movil'));
+  var ns = 'http://www.w3.org/2000/svg';
+  // Espectacular: un punto fijo que solo ilumina sus cuadras vecinas
+  [[2,4],[2,5],[3,4],[3,5]].forEach(function (p) { fijo[p[0] * COLS + p[1]].classList.add('vista'); });
+  var esp = document.createElementNS(ns, 'rect');
+  esp.setAttribute('x', 5 * cw - 14); esp.setAttribute('y', 3 * rh - 10); esp.setAttribute('width', 28); esp.setAttribute('height', 20);
+  esp.setAttribute('fill', '#071B4A'); document.getElementById('mapa-fijo').appendChild(esp);
+  // Unidad en movimiento: recorre las calles e ilumina las cuadras por donde pasa
+  var recorrido = [[0,0],[0,3],[2,3],[2,7],[4,7],[4,2],[6,2],[6,9],[3,9],[3,10],[0,10],[0,6]];
+  var svgM = document.getElementById('mapa-movil');
+  var calle = document.createElementNS(ns, 'path');
+  calle.setAttribute('d', recorrido.map(function (p, i) { return (i ? 'L' : 'M') + (p[1] * cw) + ' ' + (p[0] * rh); }).join(' '));
+  calle.setAttribute('fill', 'none'); calle.setAttribute('stroke', '#FF01FF'); calle.setAttribute('stroke-width', 3);
+  svgM.appendChild(calle);
+  var unidad = document.createElementNS(ns, 'rect');
+  unidad.setAttribute('width', 20); unidad.setAttribute('height', 12); unidad.setAttribute('x', -10); unidad.setAttribute('y', -6);
+  unidad.setAttribute('fill', '#FFF301'); unidad.setAttribute('stroke', '#071B4A'); unidad.setAttribute('stroke-width', 2);
+  svgM.appendChild(unidad);
+  var largo = calle.getTotalLength();
+  function iluminar(x, y) {
+    var c = Math.floor(x / cw), r = Math.floor(y / rh);
+    [[r,c],[r-1,c],[r,c-1],[r-1,c-1]].forEach(function (p) {
+      if (p[0] >= 0 && p[0] < ROWS && p[1] >= 0 && p[1] < COLS) movil[p[0] * COLS + p[1]].classList.add('vista');
+    });
+  }
+
+  var reducir = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!window.gsap || reducir) {
+    for (var i = 0; i <= 200; i++) { var pt = calle.getPointAtLength(largo * i / 200); iluminar(pt.x, pt.y); }
+    var fin = calle.getPointAtLength(largo); unidad.setAttribute('transform', 'translate(' + fin.x + ' ' + fin.y + ')');
+    document.querySelectorAll('.pasos li').forEach(function (li) { li.classList.add('activo'); });
+    return;
+  }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Inicio: la estela del logo se dibuja, el titular sube y la foto entra
+  document.querySelectorAll('.estela path').forEach(function (p) {
+    var l = p.getTotalLength(); p.style.strokeDasharray = l; p.style.strokeDashoffset = l;
+  });
+  var tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+  tl.to('.estela path', { strokeDashoffset: 0, duration: 1.4, stagger: 0.12, ease: 'power2.inOut' })
+    .from('.inicio h1 .linea span', { yPercent: 110, duration: 1, stagger: 0.1 }, 0.25)
+    .from('.ventana', { xPercent: 18, autoAlpha: 0, duration: 1.2 }, 0.4)
+    .from('.inicio .etiqueta, .inicio .acciones, .ficha', { autoAlpha: 0, y: 16, duration: 0.8, stagger: 0.08 }, 0.8);
+
+  // Al bajar, la combi "avanza" dentro de su ventana
+  gsap.to('#foto-inicio', { xPercent: -16, ease: 'none', scrollTrigger: { trigger: '.inicio', start: 'top top', end: 'bottom top', scrub: true } });
+
+  // Rotulación: escena fija; la camioneta se rotula conforme se baja
+  var pasos = gsap.utils.toArray('.pasos li');
+  function marcarPaso(n) { pasos.forEach(function (li, i) { li.classList.toggle('activo', i === n); }); }
+  gsap.set('.camioneta .rotulada', { clipPath: 'inset(0 100% 0 0)' });
+  var esc = gsap.timeline({
+    defaults: { ease: 'none' },
+    scrollTrigger: {
+      trigger: '.rotulacion', start: 'top top', end: '+=260%', pin: '.escena', scrub: 0.6,
+      onUpdate: function (s) { marcarPaso(Math.min(4, Math.floor(s.progress * 5))); }
+    }
+  });
+  esc.to('.medidas', { opacity: 1, duration: 0.6 }, 0.25)
+     .to('.barra-cmyk', { scaleX: 1, duration: 0.8 }, 2)
+     .to('.medidas', { opacity: 0, duration: 0.4 }, 2.8)
+     .to('.rasqueta', { opacity: 1, duration: 0.1 }, 3)
+     .fromTo('.rasqueta', { left: '0%' }, { left: '100%', duration: 1.1 }, 3)
+     .to('.camioneta .rotulada', { clipPath: 'inset(0 0% 0 0)', duration: 1.1 }, 3)
+     .to('.rasqueta', { opacity: 0, duration: 0.1 }, 4.05)
+     .to('.barra-cmyk', { autoAlpha: 0, duration: 0.3 }, 4)
+     .to('.sello', { opacity: 1, duration: 0.3 }, 4.3)
+     .to({}, { duration: 0.4 });
+
+  // Comparativa: la unidad recorre la ciudad cuando el mapa es visible
+  var avance = { t: 0 };
+  gsap.to(avance, {
+    t: 1, duration: 7, ease: 'none', repeat: -1, repeatDelay: 1.2,
+    onRepeat: function () { movil.forEach(function (q) { q.classList.remove('vista'); }); },
+    onUpdate: function () {
+      var pt = calle.getPointAtLength(largo * avance.t);
+      unidad.setAttribute('transform', 'translate(' + pt.x + ' ' + pt.y + ')');
+      iluminar(pt.x, pt.y);
+    },
+    scrollTrigger: { trigger: '.mapas', start: 'top 80%', toggleActions: 'play pause resume pause' }
+  });
+})();
+</script>
+</body>
+</html>

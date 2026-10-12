@@ -18,6 +18,7 @@ Página web e Instagram para **GAL Publicidad** (México): rotulan vehículos de
 - `RECURSOS.md` — colores de marca, skills instaladas, sitios de inspiración
 - `marca/` — logo, camioneta rotulada, video del logo
 - `entregas/` — PDF e imágenes para enviar a GAL (el código fuente está en `entregas/fuente/`)
+- `prototipo/` — prototipo navegable de la página (index.html + img/), listo para Netlify
 
 ## Sobre el usuario
 
