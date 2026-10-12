@@ -54,7 +54,7 @@ Logo GAL · Nosotros · Clientes · Servicios · Proceso · Preguntas · **[Soli
 
 **Logos:** Kolors · Price Shoes · Botanas El Sol · Universidad Humanitas
 
-*GAL ya autorizó usar los logos.* `[PENDIENTE: archivos de los 4 logos en buena calidad, PNG o SVG]`
+*GAL ya autorizó usar los logos. En esta franja van **solo los clientes directos**; las marcas trabajadas vía intermediario NO llevan logo aquí (ver `LEGAL.md`).* `[PENDIENTE: archivos de los 4 logos en buena calidad, PNG o SVG]`
 
 ---
 
@@ -79,7 +79,7 @@ Ser la empresa de referencia en publicidad en transporte en México, reconocida 
 - **Cumplimiento:** respetamos los tiempos y acuerdos de cada campaña.
 - **Calidad:** cuidamos cada detalle, desde el diseño hasta la instalación del vinil.
 - **Transparencia:** cotizaciones claras, con medidas, diseño y precio final desglosados.
-- **Compromiso:** supervisamos los anuncios durante toda la campaña y los reemplazamos si se dañan.
+- **Compromiso:** supervisamos los anuncios durante toda la campaña y los reemplazamos si se dañan. `[CONFIRMAR GAL: es una promesa; si se publica, deben cumplirla]`
 - **Servicio integral:** un solo proveedor responsable de todo el proceso.
 
 ### Nuestros compromisos con cada cliente
@@ -118,7 +118,9 @@ Ser la empresa de referencia en publicidad en transporte en México, reconocida 
 
 **Trabajo:** probar que funciona con campañas reales. *(Este puede ser el nuevo "momento estrella" de la página: las fotos reales de las unidades rotuladas.)*
 
-**Titular:** Campañas realizadas
+**Titular:** Marcas que hemos llevado a la calle
+
+*Galería con fotos reales (placas y personas difuminadas, versiones en `marca/fotos-web/`). Incluye clientes directos y marcas trabajadas vía intermediario: Topo Chico, O'Reilly, Mi Chamoy El Chilerito, Megaempeños, Smart Fit, Grupo Universal, Love Motel, Yess Rodríguez. Para las marcas vía intermediario: solo foto + nombre, sin decir "cliente", sin datos de campaña y sin testimonio.*
 
 **Tarjeta: Price Shoes**
 - **Proyecto:** Rotulación integral de combis y taxis para su campaña de afiliación "Hazla Price".
@@ -248,6 +250,7 @@ Depende del número y tipo de unidades, el tamaño del rotulado y la duración. 
 - Instagram `[PENDIENTE: usuario]` · LinkedIn `[PENDIENTE: si tienen]`
 - Aviso de Privacidad
 - © 2026 GAL Publicidad. Todos los derechos reservados.
+- Las marcas mostradas pertenecen a sus respectivos titulares; las fotos muestran trabajos de impresión e instalación realizados por GAL Publicidad.
 - Razón social `[PENDIENTE]` *(da más formalidad ante empresas)*
 
 ---
@@ -278,3 +281,5 @@ Obligatorio por ley porque el formulario pide datos personales. Se redacta en la
 8. ¿En cuánto tiempo **responden una cotización**?
 9. Una **frase de un cliente** (testimonio)
 10. **Instagram**, **LinkedIn** y **razón social** (para el pie de página y el Aviso de Privacidad)
+11. Confirmar que pueden **cumplir el reemplazo de vinil dañado** (se promete en la página)
+12. Confirmar que **todas las fotos son de trabajos hechos por GAL** (impresos o instalados por ellos)

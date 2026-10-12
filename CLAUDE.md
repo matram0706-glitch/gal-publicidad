@@ -5,7 +5,7 @@ Página web e Instagram para **GAL Publicidad** (México): rotulan vehículos de
 ## Datos de la empresa
 
 - 9 años de experiencia · 300–500 vehículos rotulados al año · campañas de hasta ~100 unidades · se pueden usar los logos de clientes
-- Fotos reales de campañas en `marca/fotos/` (tapar placas antes de publicar)
+- Fotos originales en `marca/fotos/` (NO publicar); versiones con placas/personas difuminadas en `marca/fotos-web/` (usar estas)
 - Tiempos: dependen de la complejidad del proyecto; se indican en la cotización (no publicar plazos fijos)
 - Correo: galpublicidad@gmail.com
 - Clientes directos: Kolors, Price Shoes, Botanas El Sol, Universidad Humanitas
@@ -16,6 +16,7 @@ Página web e Instagram para **GAL Publicidad** (México): rotulan vehículos de
 
 - `ESTRATEGIA.md` — plan maestro: público, estructura de la página, Instagram, fases y checklist de contenido
 - `TEXTOS.md` — textos de cada sección de la página (Fase 1), con lo que falta pedir a GAL
+- `LEGAL.md` — checklist legal: marcas, fotos, promesas, Aviso de Privacidad
 - `RECURSOS.md` — colores de marca, skills instaladas, sitios de inspiración
 - `marca/` — logo, camioneta rotulada, video del logo
 - `entregas/` — PDF e imágenes para enviar a GAL (el código fuente está en `entregas/fuente/`)
