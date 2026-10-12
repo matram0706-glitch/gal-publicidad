@@ -75,6 +75,15 @@
   .inicio .acciones { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 44px; }
   .ventana { position: relative; aspect-ratio: 4 / 3.2; clip-path: polygon(16% 0, 100% 0, 84% 100%, 0 100%); overflow: hidden; }
   .ventana img { position: absolute; inset: 0; width: 125%; max-width: none; height: 100%; object-fit: cover; object-position: 30% 55%; }
+  /* Flota: dos columnas de fotos reales que circulan en sentidos opuestos */
+  .flota { aspect-ratio: 4 / 4.3; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .flota .col { display: flex; flex-direction: column; animation: circular 46s linear infinite; }
+  .flota .col.baja { animation-direction: reverse; animation-duration: 54s; }
+  .flota img { position: static; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; margin-bottom: 12px; max-width: 100%; }
+  .flota .col.baja img { aspect-ratio: 3 / 3.4; }
+  @keyframes circular { to { transform: translateY(-50%); } }
+  /* Trama de impresión (puntos) */
+  .trama::after { content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 0; background-image: radial-gradient(rgba(1,255,255,.22) 1.1px, transparent 1.7px); background-size: 10px 10px; -webkit-mask-image: linear-gradient(110deg, transparent 35%, #000 95%); mask-image: linear-gradient(110deg, transparent 35%, #000 95%); }
   .estela { position: absolute; left: 0; width: 100%; bottom: 9%; height: 22%; z-index: 1; pointer-events: none; }
   .estela path { fill: none; stroke-width: 15; stroke-linecap: butt; }
   .ficha { position: relative; z-index: 3; border-top: 1px solid rgba(255,255,255,.14); background: var(--tinta); }
@@ -146,22 +155,29 @@
   .mapa .cuadra.vista { fill: #BFD0F5; }
   .mapa.movil .cuadra.vista { fill: var(--azul); }
 
-  /* 6. Casos */
-  .casos { padding: 130px 0 120px; }
-  .casos h2 { color: var(--azul); margin-bottom: 60px; }
-  .galeria { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
-  .caso { margin: 0; position: relative; }
-  .caso .foto { overflow: hidden; background: var(--papel); }
-  .caso img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s ease; }
-  .caso:hover img { transform: scale(1.04); }
-  .caso figcaption { padding: 16px 0 0; display: grid; gap: 2px; }
-  .caso figcaption b { font-size: 22px; font-style: italic; font-weight: 850; font-stretch: 118%; color: var(--tinta); }
-  .caso figcaption span { font-size: 15px; color: var(--suave); }
-  .c1 { grid-column: 1 / 8; } .c1 .foto { aspect-ratio: 16 / 10; }
-  .c2 { grid-column: 8 / 13; } .c2 .foto { aspect-ratio: 4 / 4.65; }
-  .c3 { grid-column: 1 / 5; margin-top: 30px; } .c3 .foto { aspect-ratio: 3 / 4; }
-  .c4 { grid-column: 5 / 13; margin-top: 30px; } .c4 .foto { aspect-ratio: 16 / 9.4; }
-  .pendientes { grid-column: 1 / -1; margin-top: 30px; padding: 26px 30px; border: 2px dashed var(--linea); color: var(--suave); font-size: 15px; }
+  /* 6. Trabajos: galería horizontal */
+  .trabajos { background: var(--tinta); color: var(--blanco); position: relative; overflow: hidden; min-height: 100svh; display: flex; flex-direction: column; justify-content: center; padding: 104px 0 28px; }
+  .trabajos .cabeza { display: grid; grid-template-columns: 1.5fr 1fr; gap: 50px; align-items: end; position: relative; z-index: 1; }
+  .trabajos .etiqueta { color: var(--cian); }
+  .trabajos h2 { font-size: clamp(34px, 3.8vw, 58px); }
+  .trabajos .cabeza p { margin: 0; color: rgba(255,255,255,.75); max-width: 46ch; }
+  .riel { overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; position: relative; z-index: 1; margin-top: 34px; }
+  .riel::-webkit-scrollbar { display: none; }
+  .riel.fijo { overflow: visible; }
+  .pista { display: flex; gap: 26px; width: max-content; padding: 0 max(24px, calc((100vw - 1180px) / 2)); }
+  .obra { margin: 0; flex: none; scroll-snap-align: start; }
+  .obra .foto { height: min(46vh, 440px); aspect-ratio: var(--r, 4 / 3); overflow: hidden; position: relative; background: #0d2560; }
+  .obra img { width: 100%; height: 100%; object-fit: cover; transition: transform .9s ease; }
+  .obra:hover img { transform: scale(1.04); }
+  .obra .foto::before, .obra .foto::after { content: ""; position: absolute; width: 22px; height: 22px; z-index: 1; border: 2px solid var(--cian); }
+  .obra .foto::before { top: 12px; left: 12px; border-right: 0; border-bottom: 0; }
+  .obra .foto::after { bottom: 12px; right: 12px; border-left: 0; border-top: 0; border-color: var(--magenta); }
+  .obra figcaption { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-top: 14px; max-width: 100%; }
+  .obra figcaption b { font-size: 24px; font-style: italic; font-weight: 850; font-stretch: 118%; line-height: 1.1; }
+  .obra figcaption span { font-size: 14px; color: rgba(255,255,255,.65); white-space: nowrap; }
+  .avance { width: var(--ancho); margin: 34px auto 0; height: 6px; background: rgba(255,255,255,.12); position: relative; z-index: 1; }
+  .avance i { position: absolute; inset: 0; transform-origin: left; transform: scaleX(.08); background: linear-gradient(90deg, var(--cian) 25%, var(--magenta) 25% 50%, var(--amarillo) 50% 75%, var(--blanco) 75%); }
+  .nota-marcas { width: var(--ancho); margin: 16px auto 0; font-size: 13px; color: rgba(255,255,255,.5); position: relative; z-index: 1; }
 
   /* 7. Servicios */
   .servicios { background: var(--tinta); color: var(--blanco); padding: 130px 0; }
@@ -244,8 +260,12 @@
     .pasos b { font-size: 16px; }
     .nosotros .reparto, .comparar .cabeza, .mapas, .preguntas .reparto, .cotiza .reparto { grid-template-columns: 1fr; gap: 40px; }
     .valores { grid-template-columns: 1fr 1fr; gap: 0 20px; }
-    .galeria { grid-template-columns: 1fr; }
-    .c1, .c2, .c3, .c4 { grid-column: 1; margin-top: 0; }
+    .trabajos .cabeza { grid-template-columns: 1fr; gap: 18px; }
+    .riel { scroll-padding-left: 16px; }
+    .obra { width: 80vw; }
+    .obra .foto { height: auto; width: 100%; max-height: 62vh; }
+    .obra figcaption { flex-direction: column; gap: 2px; }
+    .pista { padding: 0 16px; gap: 14px; }
     .serv { grid-template-columns: 1fr; gap: 14px; }
     .preguntas h2 { position: static; }
     form { grid-template-columns: 1fr; padding: 24px; }
@@ -257,6 +277,7 @@
     html { scroll-behavior: auto; }
     .pasos li { opacity: 1; }
     .pasos li span { max-height: none; }
+    .flota .col { animation: none; }
   }
 </style>
 </head>
@@ -271,7 +292,7 @@
     <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu-nav">Menú</button>
     <nav id="menu-nav" aria-label="Principal">
       <a href="#nosotros">Nosotros</a>
-      <a href="#clientes">Clientes</a>
+      <a href="#trabajos">Trabajos</a>
       <a href="#servicios">Servicios</a>
       <a href="#proceso">Proceso</a>
       <a href="#preguntas">Preguntas</a>
@@ -283,7 +304,7 @@
 <main>
 
 <!-- 1. Inicio -->
-<section class="inicio" id="inicio">
+<section class="inicio trama" id="inicio">
   <svg class="estela" viewBox="0 0 1440 240" preserveAspectRatio="none" aria-hidden="true">
     <path d="M-20 230 C 420 225, 900 150, 1460 18" stroke="#FFF301"/>
     <path d="M-20 238 C 420 236, 900 176, 1460 58" stroke="#FF01FF"/>
@@ -303,8 +324,9 @@
         <a class="boton contorno" href="#cotizar" title="Número de WhatsApp pendiente">Contacto por WhatsApp</a>
       </div>
     </div>
-    <div class="ventana" aria-hidden="true">
-      <img id="foto-inicio" src="img/priceshoes-combi-lateral.jpg" alt="">
+    <div class="ventana flota" aria-hidden="true">
+      <div class="col"><img src="img/changan-suv-negra-lateral.jpg" alt=""><img src="img/topochico-combi-lateral.jpg" alt=""><img src="img/priceshoes-prokennex-combi-lateral.jpg" alt=""><img src="img/chilerito-combi-lateral.jpg" alt=""><img src="img/megaempenos-combi-lateral-oro.jpg" alt=""><img src="img/changan-suv-negra-lateral.jpg" alt=""><img src="img/topochico-combi-lateral.jpg" alt=""><img src="img/priceshoes-prokennex-combi-lateral.jpg" alt=""><img src="img/chilerito-combi-lateral.jpg" alt=""><img src="img/megaempenos-combi-lateral-oro.jpg" alt=""></div>
+      <div class="col baja"><img src="img/grupouniversal-camion-trasera.jpg" alt=""><img src="img/topochico-combi-trasera.jpg" alt=""><img src="img/megaempenos-combi-trasera.jpg" alt=""><img src="img/priceshoes-prokennex-combi-trasera.jpg" alt=""><img src="img/lovemotel-camion-trasera.jpg" alt=""><img src="img/grupouniversal-camion-trasera.jpg" alt=""><img src="img/topochico-combi-trasera.jpg" alt=""><img src="img/megaempenos-combi-trasera.jpg" alt=""><img src="img/priceshoes-prokennex-combi-trasera.jpg" alt=""><img src="img/lovemotel-camion-trasera.jpg" alt=""></div>
     </div>
   </div>
   <div class="ficha">
@@ -410,23 +432,34 @@
   </div>
 </section>
 
-<!-- 6. Casos -->
-<section class="casos" aria-labelledby="t-casos">
-  <div class="ancho">
-    <p class="etiqueta">Casos de éxito</p>
-    <h2 class="titular h2" id="t-casos">Campañas realizadas</h2>
-    <div class="galeria">
-      <figure class="caso c1"><div class="foto"><img src="img/priceshoes-combi-lateral.jpg" alt="Combi rotulada con la campaña Hazla Price de Price Shoes" loading="lazy"></div>
-        <figcaption><b>Price Shoes</b><span>Rotulación integral de combis para la campaña de afiliación “Hazla Price”.</span></figcaption></figure>
-      <figure class="caso c2"><div class="foto"><img src="img/priceshoes-taxi-frente.jpg" alt="Taxi con el logotipo de Price Shoes en el cofre" loading="lazy"></div>
-        <figcaption><b>Price Shoes</b><span>Cofre y costados de taxis.</span></figcaption></figure>
-      <figure class="caso c3"><div class="foto"><img src="img/kolors-camioneta-lateral.jpg" alt="Camioneta de pasajeros con la identidad de color de Kolors" loading="lazy" style="object-position:70% 50%"></div>
-        <figcaption><b>Kolors</b><span>Identidad de marca en camionetas de pasajeros.</span></figcaption></figure>
-      <figure class="caso c4"><div class="foto"><img src="img/priceshoes-taxi-lateral.jpg" alt="Taxi rotulado de costado con la campaña de Price Shoes" loading="lazy" style="object-position:50% 62%"></div>
-        <figcaption><b>Price Shoes</b><span>Taxis rotulados de costado completo.</span></figcaption></figure>
-      <p class="pendientes">Botanas El Sol y Universidad Humanitas: <span class="pend">fotos pendientes</span></p>
+<!-- 6. Trabajos: marcas que hemos llevado a la calle -->
+<section class="trabajos trama" id="trabajos" aria-labelledby="t-trabajos">
+  <div class="ancho cabeza">
+    <div>
+      <p class="etiqueta">Trabajos realizados</p>
+      <h2 class="titular" id="t-trabajos">Marcas que hemos llevado a la calle</h2>
+    </div>
+    <p>Combis, camionetas, taxis, camiones y vehículos de agencia. Cada foto es un trabajo impreso e instalado por GAL Publicidad.</p>
+  </div>
+  <div class="riel" id="riel">
+    <div class="pista" id="pista">
+      <figure class="obra" style="--r:4 / 3"><div class="foto"><img src="img/changan-suv-negra-lateral.jpg" alt="SUV de agencia: Changan" loading="lazy"></div><figcaption><b>Changan</b><span>SUV de agencia</span></figcaption></figure>
+      <figure class="obra" style="--r:4 / 3"><div class="foto"><img src="img/topochico-combi-lateral.jpg" alt="Combi, costado completo: Topo Chico" loading="lazy"></div><figcaption><b>Topo Chico</b><span>Combi, costado completo</span></figcaption></figure>
+      <figure class="obra" style="--r:3 / 4"><div class="foto"><img src="img/grupouniversal-camion-trasera.jpg" alt="Camión urbano, trasera: Grupo Universal" loading="lazy"></div><figcaption><b>Grupo Universal</b><span>Camión urbano, trasera</span></figcaption></figure>
+      <figure class="obra" style="--r:4 / 3"><div class="foto"><img src="img/priceshoes-prokennex-combi-lateral.jpg" alt="Combi, rotulado integral: Price Shoes" loading="lazy"></div><figcaption><b>Price Shoes</b><span>Combi, rotulado integral</span></figcaption></figure>
+      <figure class="obra" style="--r:4 / 3"><div class="foto"><img src="img/chilerito-combi-lateral.jpg" alt="Combi, rotulado integral: Mi Chamoy El Chilerito" loading="lazy"></div><figcaption><b>Mi Chamoy El Chilerito</b><span>Combi, rotulado integral</span></figcaption></figure>
+      <figure class="obra" style="--r:3 / 4"><div class="foto"><img src="img/megaempenos-combi-trasera.jpg" alt="Combi, trasera completa: Megaempeños" loading="lazy"></div><figcaption><b>Megaempeños</b><span>Combi, trasera completa</span></figcaption></figure>
+      <figure class="obra" style="--r:16 / 9"><div class="foto"><img src="img/kolors-camioneta-lateral.jpg" alt="Camioneta de pasajeros: Kolors" loading="lazy"></div><figcaption><b>Kolors</b><span>Camioneta de pasajeros</span></figcaption></figure>
+      <figure class="obra" style="--r:1060 / 650"><div class="foto"><img src="img/oreilly-camion-trasera.jpg" alt="Camión urbano, trasera: O’Reilly Autopartes" loading="lazy"></div><figcaption><b>O’Reilly Autopartes</b><span>Camión urbano, trasera</span></figcaption></figure>
+      <figure class="obra" style="--r:4 / 3"><div class="foto"><img src="img/priceshoes-taxi-lateral.jpg" alt="Taxi, costado completo: Price Shoes" loading="lazy"></div><figcaption><b>Price Shoes</b><span>Taxi, costado completo</span></figcaption></figure>
+      <figure class="obra" style="--r:3 / 4"><div class="foto"><img src="img/topochico-combi-trasera.jpg" alt="Combi, trasera: Topo Chico" loading="lazy"></div><figcaption><b>Topo Chico</b><span>Combi, trasera</span></figcaption></figure>
+      <figure class="obra" style="--r:4 / 3"><div class="foto"><img src="img/changan-suv-blanca-frente.jpg" alt="SUV de agencia: Changan" loading="lazy"></div><figcaption><b>Changan</b><span>SUV de agencia</span></figcaption></figure>
+      <figure class="obra" style="--r:3 / 4"><div class="foto"><img src="img/lovemotel-camion-trasera.jpg" alt="Camión urbano, trasera: Love Motel" loading="lazy"></div><figcaption><b>Love Motel</b><span>Camión urbano, trasera</span></figcaption></figure>
+      <figure class="obra" style="--r:9 / 16"><div class="foto"><img src="img/entrelosdos-camion-trasera.jpg" alt="Camión urbano, trasera: Yess Rodríguez" loading="lazy"></div><figcaption><b>Yess Rodríguez</b><span>Camión urbano, trasera</span></figcaption></figure>
     </div>
   </div>
+  <div class="avance" aria-hidden="true"><i id="avance"></i></div>
+  <p class="nota-marcas">Las marcas mostradas pertenecen a sus respectivos titulares.</p>
 </section>
 
 <!-- 7. Servicios -->
@@ -627,8 +660,24 @@
     .from('.ventana', { xPercent: 18, autoAlpha: 0, duration: 1.2 }, 0.4)
     .from('.inicio .etiqueta, .inicio .acciones, .ficha', { autoAlpha: 0, y: 16, duration: 0.8, stagger: 0.08 }, 0.8);
 
-  // Al bajar, la combi "avanza" dentro de su ventana
-  gsap.to('#foto-inicio', { xPercent: -16, ease: 'none', scrollTrigger: { trigger: '.inicio', start: 'top top', end: 'bottom top', scrub: true } });
+  // Trabajos: en computadora la galería avanza de lado al bajar; en celular se desliza con el dedo
+  var pista = document.getElementById('pista'), riel = document.getElementById('riel'), barra = document.getElementById('avance');
+  gsap.matchMedia().add('(min-width: 901px)', function () {
+    riel.classList.add('fijo');
+    var distancia = function () { return Math.max(0, pista.scrollWidth - window.innerWidth); };
+    gsap.to(pista, {
+      x: function () { return -distancia(); }, ease: 'none',
+      scrollTrigger: {
+        trigger: '.trabajos', start: 'top top', end: function () { return '+=' + distancia(); },
+        pin: true, scrub: 0.6, invalidateOnRefresh: true,
+        onUpdate: function (st) { barra.style.transform = 'scaleX(' + (0.08 + st.progress * 0.92) + ')'; }
+      }
+    });
+    return function () { riel.classList.remove('fijo'); };
+  });
+  riel.addEventListener('scroll', function () {
+    var max = riel.scrollWidth - riel.clientWidth; if (max > 0) barra.style.transform = 'scaleX(' + (0.08 + riel.scrollLeft / max * 0.92) + ')';
+  }, { passive: true });
 
   // Rotulación: escena fija; la camioneta se rotula conforme se baja
   var pasos = gsap.utils.toArray('.pasos li');
