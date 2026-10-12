@@ -8,7 +8,8 @@ Página web e Instagram para **GAL Publicidad** (México): rotulan vehículos de
 - Fotos reales de campañas en `marca/fotos/` (tapar placas antes de publicar)
 - Tiempos: dependen de la complejidad del proyecto; se indican en la cotización (no publicar plazos fijos)
 - Correo: galpublicidad@gmail.com
-- Clientes: Kolors, Price Shoes, Botanas El Sol, Universidad Humanitas
+- Clientes directos: Kolors, Price Shoes, Botanas El Sol, Universidad Humanitas
+- Marcas trabajadas (algunas vía intermediario; en la web usar "marcas que hemos llevado a la calle", no "clientes"): Topo Chico, O'Reilly Autopartes, Mi Chamoy El Chilerito, Grupo Universal (carrera Andares), Love Motel GDL, Yess Rodríguez (música)
 - Frases: "Publicidad urbana" · "Al alcance de ti"
 
 ## Documentos del proyecto (leer solo el que haga falta)
