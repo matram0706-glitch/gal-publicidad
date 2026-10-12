@@ -25,7 +25,7 @@
 |---|---|
 | Servicio principal | Campañas de publicidad en vehículos de transporte (rutas del cliente) |
 | Otros servicios | Impresión digital (viniles y lonas, su fuerte), recorte de vinil |
-| Volumen | **300 a 500 vehículos rotulados al año** · campañas de hasta ~100 unidades por cliente |
+| Volumen | **300 a 500 vehículos rotulados al año** · campañas de hasta 200 unidades por cliente |
 | Duración recomendada | **Más de 3 meses**: más volumen y menor costo |
 | Seguimiento | Monitoreo constante; se reemplaza el vinil si se daña |
 | Tiempo de entrega | Depende de la complejidad; se indica en la cotización |
@@ -82,7 +82,7 @@ Circulan cifras como "30,000 a 70,000 impresiones diarias por vehículo" y "97% 
 |---|---|
 | "¿Esto de verdad funciona?" | Casos reales con fotos de las 4 marcas |
 | "¿Y si el anuncio se daña?" | Monitoreo constante y reemplazo del vinil |
-| "¿Pueden hacer una campaña grande?" | 300–500 vehículos al año; campañas de hasta ~100 unidades |
+| "¿Pueden hacer una campaña grande?" | 300–500 vehículos al año; campañas de hasta 200 unidades |
 | "¿Cuánto cuesta?" | "Desde $X" o paquetes. Si no se publica precio: "Cotización en 24 horas" |
 | "¿Cuánto tardan?" | Depende de la complejidad; el plazo va en la cotización |
 | "¿Son serios?" | 9 años, logos de clientes, correo y teléfono visibles, factura |

@@ -4,7 +4,7 @@ Página web e Instagram para **GAL Publicidad** (México): rotulan vehículos de
 
 ## Datos de la empresa
 
-- 9 años de experiencia · 300–500 vehículos rotulados al año · campañas de hasta ~100 unidades · se pueden usar los logos de clientes
+- 9 años de experiencia · 300–500 vehículos rotulados al año · campañas de hasta 200 unidades · se pueden usar los logos de clientes
 - Fotos originales en `marca/fotos/` (NO publicar); versiones con placas/personas difuminadas en `marca/fotos-web/` (usar estas)
 - Tiempos: dependen de la complejidad del proyecto; se indican en la cotización (no publicar plazos fijos)
 - Correo: galpublicidad@gmail.com

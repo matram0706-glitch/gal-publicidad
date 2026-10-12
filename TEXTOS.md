@@ -38,7 +38,7 @@ Logo GAL · Nosotros · Clientes · Servicios · Proceso · Preguntas · **[Soli
 - Secundario: **Contacto por WhatsApp** `[PENDIENTE: número de WhatsApp]`
 
 **Tres datos debajo (en fila):**
-| 9 años | 300–500 | Hasta ~100 |
+| 9 años | 300–500 | Hasta 200 |
 |---|---|---|
 | de experiencia | vehículos rotulados al año | unidades por campaña |
 
@@ -189,7 +189,7 @@ No. Rotulamos las unidades de su empresa: combis, camionetas, taxis, camiones y 
 Depende de la complejidad del proyecto: número de unidades, tipo de vehículo y diseño. Le indicamos el tiempo de entrega desde la cotización.
 
 **¿Cuántas unidades puedo rotular?**
-Desde pocas unidades hasta alrededor de 100 por campaña. `[PENDIENTE: ¿hay un mínimo de unidades?]`
+Desde pocas unidades hasta 200 por campaña. `[PENDIENTE: ¿hay un mínimo de unidades?]`
 
 **¿Cuál es la duración recomendada?**
 Más de 3 meses: su marca gana presencia y el costo mensual disminuye.
