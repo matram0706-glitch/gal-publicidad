@@ -74,3 +74,31 @@ El logo usa una letra gruesa e inclinada. Buscar fuentes "bold italic" o "conden
 | awwwards-3d | tsogjavklann | MIT |
 | awwwards-animations | devmartinese | MIT (según su README) |
 | Impeccable | Paul Bakaus | Apache 2.0 |
+
+## Ver videos: el comando `/watch`
+
+Claude puede "ver" un video: saca fotogramas y transcribe el audio, y con eso
+responde preguntas sobre lo que pasa en pantalla. Sirve para copiar ideas de
+animación de sitios o referencias que te gusten.
+
+**Cómo se usa:**
+
+```
+/watch marca/intro-logo.mp4 ¿cómo se mueve el logo?
+/watch https://www.loom.com/share/xxxx resume qué enseña
+```
+
+Si no pones nada, te pregunta qué video del proyecto quieres ver.
+
+**Límites:**
+
+- **YouTube no funciona** desde las sesiones en la nube: pide verificación
+  anti-bot porque la sesión corre en un servidor. Hay que bajar el video y
+  subirlo al proyecto, o usar un enlace de otra plataforma.
+- Videos de más de 10 minutos: conviene hacer una pregunta concreta en vez
+  de pedir un resumen completo.
+
+**Cómo funciona por dentro:** `.claude/hooks/session-start.sh` instala las
+herramientas (`yt-dlp`, `faster-whisper`, `av<16`) al arrancar cada sesión en
+la nube. `ffmpeg` ya viene incluido. En una computadora local el hook no hace
+nada. Tarda unos segundos y solo corre una vez por sesión.
